@@ -1,0 +1,84 @@
+% This file defines a number of new commands and operators for nicer and more consistent math typesetting.
+% Most are from http://www.tug.org/TUGboat/Articles/tb18-1/tb54becc.pdf
+
+
+
+
+% similar-greater, similar-less
+\def\simge{%
+    \mathrel{\rlap{\raise 0.511ex
+    \hbox{$>$}}{\lower 0.511ex \hbox{$\sim$}}}}
+\def\simle{%
+    \mathrel{\rlap{\raise 0.511ex
+    \hbox{$<$}}{\lower 0.511ex \hbox{$\sim$}}}}
+
+% make vectors bold, rather than using an arrow above
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+% Angstrom
+\DeclareMathAccent{\ring}{\mathalpha}{operators}{"17}
+\providecommand*{\angs}{\ensuremath{\smash{\mathrm{\ring A}}}}
+
+% Ohm
+\providecommand*{\ohm}{\ensuremath{\mathrm{\Omega}}}
+
+% micro
+\providecommand*{\micro}{\ensuremath{\mu}}
+
+% micrometers
+\providecommand*{\um}{\micro m}
+
+% microseconds
+\providecommand*{\us}{\micro s}
+
+% Units
+\providecommand*{\unit}[1]{\ensuremath{\mathrm{\,#1}}}
+
+% The number `e'
+\providecommand*{\eu}{\ensuremath{\mathrm{e}}}
+
+% The imaginary unit
+\providecommand*{\iu}{\ensuremath{\mathrm{i}}}
+
+% text on exponent (superscript) level
+\providecommand*{\apx}[1]{\ensuremath{^\mathrm{#1}}}
+
+% text on index (subscript) level
+\providecommand*{\ped}[1]{\ensuremath{_\mathrm{#1}}}
+
+% degrees (for angles)
+\providecommand*{\degree}{\ensuremath{^\circ}}
+
+% degrees celsius
+\providecommand*{\celsius}{\ensuremath{\mathrm{^\circ C}}}
+
+% Real and Imaginary parts
+\providecommand{\newoperator}[3]{\newcommand*{#1}{\mathop{#2}#3}}
+\providecommand{\renewoperator}[3]{\renewcommand*{#1}{\mathop{#2}#3}}
+\renewoperator{\Re}{\mathrm{Re}}{\nolimits}
+\renewoperator{\Im}{\mathrm{Im}}{\nolimits}
+
+% differential operator
+\makeatletter
+\providecommand*{\diff}{\@ifnextchar^{\DIfF}{\DIfF^{}}}
+\def\DIfF^#1{\mathop{\mathrm{\mathstrut d}}\nolimits^{#1}\gobblespace}
+\def\gobblespace{\futurelet\diffarg\opspace}
+\def\opspace{%
+    \let\DiffSpace\!%
+    \ifx\diffarg(%
+        \let\DiffSpace\relax
+    \else
+        \ifx\diffarg[%
+            \let\DiffSpace\relax
+        \else
+            \ifx\diffarg\{%
+                \let\DiffSpace\relax
+            \fi\fi\fi\DiffSpace}
+
+% total and partial derivatives
+%   1st argument [] (optional): derivative order
+%   2nd argument {}: function being derived
+%   3rd argument {}: derivation variable
+\providecommand*{\deriv}[3][]{\frac{\diff^{#1}#2}{\diff #3^{#1}}}
+\providecommand*{\pderiv}[3][]{\frac{\partial^{#1}#2}{\partial
+#3^{#1}}}

@@ -1,0 +1,47 @@
+\chapter{Four-Point Scattering of Scalars\label{Ch4Sca}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this chapter we compute four-point scattering amplitudes in the semiclassical eikonal approximation. We will study the \textit{elastic} event
+\begin{equation}
+	a(p_{1}) + b(p_{2}) \longrightarrow a(p_{3}) + b(p_{4})
+\end{equation}
+The external states are massive,
+\begin{equation}
+	p_{1}^{2} = p_{3}^{2} = -m_{a}^{2} \qquad p_{2}^{2} = p_{4}^{2} = -m_{b}^{2}
+\end{equation}
+The relativistic \textit{semiclassical} approximation corresponds to large masses. We have the three Mandelstam invariants,
+\begin{equation}
+	s = -(p_{1} + p_{2})^{2} \qquad t = -(p_{1} - p_{3})^{2} \qquad u = -(p_{1} - p_{4})^{2}
+\end{equation}
+with
+\begin{equation}
+	s + t + u = 2m_{a}^{2} + 2m_{b}^{2}
+\end{equation}
+Since the only open exchange channel (i.e. the kinematical variable that measures the energy-momentum of the exchanged particle) is $t$, we \textit{define} the two-body semiclassical approximation as
+\begin{equation}
+ 	\frac{t}{m_{a}^{2}} \rightarrow 0 \qquad \frac{t}{m_{b}^{2}} \rightarrow 0
+\end{equation}
+The \textit{eikonal} approximation corresponds to the regime of small-angle scattering and fixed spatial velocity. The cosine of the scattering angle is
+\begin{equation}
+	\cos{(\theta_{s})} = 1 + \frac{2 s t}{[s - (m_{a} - m_{b})^{2}][s - (m_{a} + m_{b})^{2}]}
+\end{equation}
+and the spatial velocities\footnote{See appendix \ref{AppKin4} for more details.} are
+\begin{align}
+	|\mathbf{v}_{1}| &= |\mathbf{v}_{3}| = \frac{\sqrt{[s - (m_{a} - m_{b})^{2}] [s - (m_{a} + m_{b})^{2}]}}{s + m_{a}^{2} - m_{b}^{2}} \\
+	|\mathbf{v}_{2}| &= |\mathbf{v}_{4}| = \frac{\sqrt{[s - (m_{a} - m_{b})^{2}] [s - (m_{a} + m_{b})^{2}]}}{s - m_{a}^{2} + m_{b}^{2}}
+\end{align}
+We \textit{define} the \textbf{two-body semiclassical eikonal approximation} as
+\begin{equation}
+	\frac{t}{m_{a} m_{b}} \rightarrow 0 \qquad \frac{t}{s} \rightarrow 0 \qquad \text{fixed } \frac{s}{m_{a} m_{b}} \qquad \text{fixed } \frac{u}{m_{a} m_{b}} \qquad \text{fixed } \frac{m_{a}}{m_{b}} \label{2BodyEikonalJWKB}
+\end{equation}
+These are the approximations that we use in this chapter. Note that, unlike in previous work on the eikonal approximation, we do not explicitly take $s \rightarrow \infty$.
+
+First, in \S\ref{SecMasslessSca4} we compute the amplitude for two particles exchanging massless scalar quanta. The bulk of this first computation is long, but it is meant to introduce the philosophy behind our methods. In \S\ref{SecMasslessVec4} and \S\ref{SecMasslessTen4} we consider particles exchanging massless quanta with spin: First the exchange of massless vector quanta (photons), and then the exchange of massless symmetric tensor quanta (linearized gravitons). The resulting amplitudes are very similar to those found for the massless scalar exchange. Finally, in \S\ref{SecMassiveSca4} we consider particles exchanging massive scalar quanta. The results in this section are not as interesting as those in the previous three sections, but nevertheless, they point to some curious properties of scattering in three spacetime dimensions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Sections/8_1_4ScaMasslessSca}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Sections/8_2_4ScaMasslessVec}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Sections/8_3_4ScaMasslessTen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Sections/8_4_4ScaMassiveSca}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

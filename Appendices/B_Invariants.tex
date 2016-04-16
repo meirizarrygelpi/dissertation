@@ -1,0 +1,101 @@
+\chapter{Momentum Invariants\label{AppMomInva}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this appendix we discuss some details on momentum invariants.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mandelstam Invariants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The $n$-quanta Mandelstam invariants involve the squared magnitude of a particular linear combination of $n \geq 2$ momentum vectors. This linear combination contains incoming and/or outgoing momenta.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Two-quanta}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We have two types of two-quanta Mandelstam invariants. One type is the $s$-type,
+\begin{equation}
+	s_{ij} \equiv - (p_{i} + p_{j})^{2} \label{sTypeMand}
+\end{equation}
+where either both $p_{i}$ and $p_{j}$ are incoming, or outgoing. The other is the $t$-type,
+\begin{equation}
+	t_{ij} \equiv - (p_{i} - p_{j})^{2} \label{tTypeMand}
+\end{equation}
+where either $p_{i}$ is incoming and $p_{j}$ is outgoing, or vice versa. Note that, by definition, the $s$-type invariants carry the information of two distinct bodies. The $t$-type invariants, on the other hand, can carry the information of a single body, or the incoming and outgoing information of two distinct bodies.
+
+Let $p_{i}^{2} = -m_{i}^{2}$ and $p_{j}^{2} = -m_{j}^{2}$. If $p_{i}$ and $p_{j}$ are both incoming, or both outgoing, then we have
+\begin{equation}
+	p_{i} \cdot p_{j} = \frac{m_{i}^{2} + m_{j}^{2} - s_{ij}}{2}
+\end{equation}
+On the other hand, if $p_{i}$ is incoming and $p_{j}$ is outgoing or vice versa, then
+\begin{equation}
+	p_{i} \cdot p_{j} = \frac{t_{ij} - m_{i}^{2} - m_{j}^{2}}{2}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Three-quanta}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+There are also two types of three-quanta Mandelstam invariants. The $s$-type is analogous to (\ref{sTypeMand}),
+\begin{equation}
+	s_{ijk} \equiv -(p_{i} + p_{j} + p_{k})^{2}
+\end{equation}
+and the $t$-type is analogous to (\ref{tTypeMand}),
+\begin{equation}
+	t_{ijk} \equiv -(p_{i} + p_{j} - p_{k})^{2}
+\end{equation}
+For the $s$-type we must have all three vectors be either incoming, or outgoing. On the other hand, for the $t$-type we must have either $p_{i}$ and $p_{j}$ be incoming with $p_{k}$ outgoing, or vice versa.
+
+In principle, the three-quanta Mandelstam invariants do not provide any new information since they can always be written in terms of two-quanta Mandelstam invariants. For the $s$-type we have,
+\begin{equation}
+	s_{ijk} = s_{ij} + s_{jk} + s_{ik} - m_{i}^{2} - m_{j}^{2} - m_{k}^{2}
+\end{equation}
+and similarly for the $t$-type,
+\begin{equation}
+	t_{ijk} = s_{ij} + t_{jk} + t_{ik} - m_{i}^{2} - m_{j}^{2} - m_{k}^{2}
+\end{equation}
+However, in higher-point scattering events, it might prove useful to solve for some of the two-quanta invariants in terms of three-quanta invariants.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gram Invariants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The $n$-quanta Gram invariants are defined as determinants of Gram matrices made with $n \geq 2$ momentum vectors. An $n \times n$ Gram matrix $\mathbf{G}_{n}$ is a matrix made with the $n^{2}$ inner products of $n$ distinct vectors,
+\begin{equation}
+	(\mathbf{G}_{n})_{IJ} \equiv p_{I} \cdot p_{J}, \qquad I, J = 1, \ldots, n
+\end{equation}
+The Gram invariants are sensitive to collinearity.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Two-quanta}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With two distinct momentum vectors, the two-quanta Gram invariant is
+\begin{equation}
+	G_{ij} \equiv \det{ \begin{pmatrix}
+	p_{i}^{2} & p_{i} \cdot p_{j} \\
+	p_{i} \cdot p_{j} & p_{j}^{2}
+\end{pmatrix} } = p_{i}^{2} p_{j}^{2} - (p_{i} \cdot p_{j})^{2}
+\end{equation}
+We write $G_{ij}$ as either
+\begin{equation}
+	G_{ij} = \frac{1}{4} [s_{ij} - (m_{i} - m_{j})^{2}] [(m_{i} + m_{j})^{2} - s_{ij}]
+\end{equation}
+or
+\begin{equation}
+	G_{ij} = \frac{1}{4} [t_{ij} - (m_{i} - m_{j})^{2}] [(m_{i} + m_{j})^{2} - t_{ij}]
+\end{equation}
+dependening on whether $p_{i}$ and $p_{j}$ form an $s$-type or $t$-type two-quanta Mandelstam invariant. Note that, if
+\begin{equation}
+	c_{i} p_{i} + c_{j} p_{j} = 0
+\end{equation}
+with $c_{i} \neq 0$ and $c_{j} \neq 0$, then it follows that $G_{ij} = 0$.
+
+The threshold value $(m_{i} + m_{j})^{2}$ and the pseudo-threshold value $(m_{i} - m_{j})^{2}$ mark the points where $G_{ij}$ changes sign.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Three-quanta}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With three distinct momentum vectors, the three-quanta Gram invariant is
+\begin{equation}
+	G_{ijk} \equiv \det{ \begin{pmatrix}
+	p_{i}^{2} & p_{i} \cdot p_{j} & p_{i} \cdot p_{k} \\
+	p_{i} \cdot p_{j} & p_{j}^{2} & p_{j} \cdot p_{k} \\
+	p_{i} \cdot p_{k} & p_{j} \cdot p_{k} & p_{k}^{2}
+\end{pmatrix}}
+\end{equation}
+More explicitly,
+\begin{equation}
+	G_{ijk} = 2(p_{i} \cdot p_{j})(p_{j} \cdot p_{k})(p_{i} \cdot p_{k}) + 2m_{i}^{2} m_{j}^{2} m_{k}^{2} - m_{i}^{2} G_{jk} - m_{j}^{2} G_{ik} - m_{k}^{2} G_{ij}
+\end{equation}
+With special kinematics, this can be simplified further.
+
+Note that $G_{ijk} = 0$ if any pair of the three momentum vectors are collinear.

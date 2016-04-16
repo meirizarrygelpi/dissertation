@@ -1,0 +1,142 @@
+\section{Outlook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The are many directions in which our work can be generalized. Below is a fairly large amount of speculation. The options presented below were not explored fully due the short attention span of the author.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Spinning Matter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this dissertation we only consider scalar matter. Spin is an important property that should not be ignored. In order to study particles with spin degrees of freedom, one adds anticommuting variables to the particle action functional \cite{Brink:1976uf}. For example, the action functional for a \textit{massless} spinning particle is
+\begin{equation}
+	S = \int \mathrm{d}\tau \left[ -\dot{q} \cdot p - \frac{i}{2} \dot{\psi} \cdot \psi + \frac{v}{2}p^{2} + i \chi \left( \psi \cdot p \right) \right]
+\end{equation}
+where $\psi^{m}(\tau)$ is a spacetime vector which classically anticommutes,
+\begin{equation}
+	\lbrace \psi^{m}, \psi^{n} \rbrace = 0
+\end{equation}
+and $\chi(\tau)$ is worldline Grassmann variable. The action for a \textit{massive} spinning particle requires an extra Grassmann variable.
+
+It should be straightforward to extend our methods to spinning matter. We must first fix the worldline parametrization invariance. This will involve setting $v$ and $\chi$ to appropriate constants. Then one needs to solve the free classical equations of motion. This will yield the spinning generalization of the eikonal path. With the free solutions, we can obtain the semiclassical eikonal kernel, and then the semiclassical eikonal scattering amplitude. None of these steps present big challenges. The only thing needed is time.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Higher-point Scattering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Besides two-body path integrals, one can in general consider $N$-body path integrals. As one increases the number of external states, the combinatorics grow increasingly complicated. But six-point (three-body) and eight-point (four-body) scattering should be tractable. This raises the question of whether one can study three-body or four-body bound states, or interactions between two-body bound states. Both of these possibilities are very interesting.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Revisiting Alday-Maldacena Theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+From the string theory point of view, the Alday-Maldacena calculation in $AdS_{5}$ \cite{Alday:2007hr}, like the Gross-Mende calculation in flat spacetime \cite{Gross:1987kza}, describes the fixed-angle scattering regime of a \textit{tree level} amplitude with \textit{strings}. However, the calculation in $AdS_{5}$ corresponds to a nonperturbative calculation, due to the AdS/CFT correspondence. In some sense, Alday-Maldacena theory is the best of two worlds: it uses methods similar to those mentioned in \S\ref{SecPert1stQuant} to compute a \textit{tree level} amplitude with a classical solution for a first-quantized system, but because of AdS/CFT, it also makes partial contact with the BDS ansatz for the all-loop planar MHV scattering amplitude.
+
+Indeed, the Alday-Maldacena solution does not include the gauge theory tree level amplitude pre-factor. This might not sound like a serious objection, considering the amount of insight that followed after \cite{Alday:2007hr}, but we feel that this is an important point. The tree level pre-factor is important because it explicitly shows the nature of the external states that are scattering. With our methods, we obtained nonperturbative scattering amplitudes that include the appropriate tree level pre-factor. Of course, the problem that we study is \textit{very different} from the problem that Alday \& Maldacena studied. One cannot help but wonder, with perhaps a large dose of wishful thinking, if a more complete version of the Alday-Maldacena result can be obtained.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Dual Conformal Symmetry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+One important feature of the Alday-Maldacena calculation is dual conformal symmetry. With massless particles, all four-point dual conformal invariants are fixed. But with massive particles, one can have one independent dual conformal invariant per planar class of Feynman graphs. However, in the two-body semiclassical eikonal approximation (\ref{2BodyEikonalJWKB}), the dual conformal invariants for the relevant planar classes either vanish or diverge. The remaining dual conformal invariant involves the product $su$. Outside of the physical region, in the eikonal approximation this product is \textit{quantized}, so it raises the question of whether eikonal bound state singularities are dual conformal invariant. The problem is that the dual conformal invariant with $s u$ corresponds to a planar class that is forbidden in the elastic scattering event we consider. Analytic continuation could play a role. Higher-point amplitudes have a large number of dual conformal invariants, but the analysis might be intractable due to the combinatorics. If dual conformal symmetry has something to do with bound states, then it could explain why it remained hidden for so long.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Multiple Couplings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The systems that we study involve matter interacting via a single kind of interaction. One can also consider multiple couplings. For example, one can consider matter that couples to a massless real scalar field, and also to a massless vector field. The calculation of the scattering amplitude in the eikonal JWKB approximation remains almost unchanged. One finds a result with an infinite number of singularities satisfying
+\begin{equation}
+	1 - \alpha_{0} \rho_{0}(s) - \alpha_{1} \rho_{1}(s) = -J, \qquad J = 0, 1, 2, \ldots
+\end{equation}
+Solving this equation for $s$ yields
+\begin{equation}
+	s_{J} = m_{a}^{2} + m_{b}^{2} + 2 m_{a} m_{b} \left[ \frac{Z_{a} Z_{b} \alpha_{0} \alpha_{1} + (J+1) \sqrt{Z_{a}^{2} Z_{b}^{2} \alpha_{1}^{2} + (J+1)^{2} - \alpha_{0}^{2}}}{Z_{a}^{2} Z_{b}^{2} \alpha_{1}^{2} + (J+1)^{2}} \right] \nonumber
+\end{equation}
+Since a real scalar cannot carry electric charge, the two mediating fields do not interact. We can consider other mixed couplings: scalar-graviton and vector-graviton. Since any field can couple to gravity, in both of these models one has the possibility of interactions that do not involve matter contributing to the bound state energies.% Perhaps these effects make the calculation intractable.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Anti-de Sitter Spacetime}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Systems in anti-de Sitter spacetime are relevant in the study of conformal field theories (CFTs). Indeed, the concept of primary fields and descendants is somewhat analogous to bound states. A formalism for correlation functions in CFTs analogous to Regge theory was proposed in \cite{Costa:2012cb}. This aims to better understand correlation functions in the Mellin basis \cite{Fitzpatrick:2011ia,Paulos:2011ie}. Extending our methods to anti de-Sitter spacetime would involve promoting the eikonal path in flat spacetime to a geodesic path in $AdS$. If this is successful, it could provide another approach to study correlations functions. Some work on this subject has already been done in \cite{Brower:2007qh,Cornalba:2006xk,Cornalba:2006xm,Cornalba:2007zb,
+Cornalba:2008qf,Penedones:2007ns}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Other Massive Exchanges}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Our result for the exchange of the massive scalar in $D = 4$ is not as exciting as those for the massless exchanges. However, in $D = 3$ the result is quite odd. Perhaps one can also obtain similar results with the exchange of a massive vector or tensor.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsubsection*{Chern-Simons Theory in Three Dimensions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Higher-spin Exchanges}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The amplitudes we obtained for the exchange of massless scalars, vectors, or tensors have the same general form. Indeed, we can consider the exchange of massless quanta with arbitrary spin $N$ by adding a coupling term to the free particle action of the form
+\begin{equation}
+	\frac{1}{\Gamma(N + 1)} \int \mathrm{d}\tau \, \dot{q}^{m_{1}} \cdots \dot{q}^{m_{N}} H_{m_{1} \cdots m_{N}}[q(\tau)]
+\end{equation}
+If we write down a kinetic term for the free massless higher-spin field $H$, fix the (higher) gauge symmetry in a way analogous to the Fermi-Feynman gauge-fixing (where the kinetic operator becomes the scalar term multiplying a polarization tensor), and integrate over the higher-spin field, then the two-body interaction term will have the form
+\begin{equation}
+ 	\frac{g_{N}^{2}}{[\Gamma(N+1)]^{2}} \int \int \mathrm{d}\tau \mathrm{d}\sigma \, \mathcal{H}_{N}[q_{a}(\tau), q_{b}(\sigma)] G_{0}[q_{a}(\tau) | q_{b}(\sigma)]
+\end{equation}
+where $\mathcal{H}_{N}$ involves a contraction of $N$ factors of $\dot{q}_{a}$ and $N$ factors of $\dot{q}_{b}$. For example, with $N = 3$ we expect
+\begin{equation}
+	\mathcal{H}_{3} = c_{1} \dot{q}_{a}^{2} \dot{q}_{b}^{2} (\dot{q}_{a} \cdot \dot{q}_{b}) + c_{2} (\dot{q}_{a} \cdot \dot{q}_{b})^{3}
+\end{equation}
+with $c_{1}$ and $c_{2}$ numerical coefficients determined by the kinetic operator for the higher-spin field $H$. Thus, we expect $\rho_{3}$ to have the form
+\begin{equation}
+	\rho_{3} = \frac{c_{1} x_{31}^{2} x_{42}^{2} (x_{31} \cdot x_{42}) + c_{2} (x_{31} \cdot x_{42})^{3}}{T_{a}^{2} T_{b}^{2} \sqrt{x_{31}^{2} x_{42}^{2} - (x_{31} \cdot x_{42})^{2}} }
+\end{equation}
+which would lead to a Regge trajectory of the form
+\begin{equation}
+	R_{H}(\xi_{s}) = -1 + \alpha_{3} m_{a}^{2} m_{b}^{2} \left[ \frac{\xi_{s}(c_{1} + c_{2} \xi^{2}_{s})}{\sqrt{1 - \xi^{2}_{s}}} \right] \qquad \xi_{s} \equiv \frac{s - m_{a}^{2} - m_{b}^{2}}{2 m_{a} m_{b}}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Splines}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The eikonal path is appropriate in the regime of small-angle scattering. If we wanted to move away from this regime, one would have to either solve the classical equations of motion to obtain the true classical path, or use another path as the \textit{de facto} classical path. The eikonal path is the simplest example of a spline, a piece-wise continuous path made by concatenating different curves. We can imagine concatenating two straight paths, with different slopes. The change in the slope is a modulus of the spline. Similarly, the point along the worldline where the path changes direction is another modulus. Thus, we can view these type of splines as eikonal paths with many moduli. If we integrate over these moduli, we are considering paths with all possible changes in slope, and thus we would not necessarily be restricted to the regime of small momentum transfer.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Strings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Just like a particle couples to a one-form gauge field $A$, a string couples to a two-form gauge field $B$. We can consider a two-string system where each string has a different length (in analogy with two particles of different mass). One can add a coupling term to the $B$-field and then integrate over the $B$-field. The result would correspond to a two-string interaction term. A naive dimensional analysis indicates that the semiclassical eikonal two-string interaction term is infrared-divergent in $D = 6$. If this calculation can be made to yield sensible results, it could help understand the mysterious $(2, 0)$ theory, which is expected to contain string-like objects. This problem would require generalizing the eikonal path for a particle to an eikonal surface for a string \cite{Janik:2000aj}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Nonabelian coupling}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+And finally, we have to address the elephant in the room. In order to study bound states in quantum chromodynamics, one needs to couple matter to a nonabelian gauge field. Because of the nonabelian nature of the exchange quanta, the path integral for the matter particle involves a more complicated coupling term: a nonabelian Wilson line.
+
+Perhaps something can be learned about the nonabelian interactions by studying a toy model with a scalar three-body force,
+\begin{equation}
+	S_{3}[q_{a}, q_{b}, q_{c}] = g^{3}_{0} \int \int \int \mathrm{d}\tau \mathrm{d}\sigma \mathrm{d}\rho \, \mathcal{Y}_{3}[q_{a}(\tau) | q_{b}(\sigma) |q_{c}(\rho)] \label{ThreeBodyForce}
+\end{equation}
+where $\mathcal{Y}_{3}$ is the un-truncated cubic vertex function,
+\begin{equation}
+	\mathcal{Y}_{3}(x_{a}|x_{b}|x_{c}) \equiv \frac{f_{3}}{6} \int \mathrm{d}y \, G_{0}(x_{a}|y) G_{0}(x_{b}|y) G_{0}(x_{c}|y)
+\end{equation}
+Here, $f_{3}$ is the dimensionful coupling constant that appears in the scalar cubic interaction vertex. Thus, $f_{3}$ has units
+\begin{equation}
+	[f_{3}] = \left( \frac{D - 7}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}]
+\end{equation}
+The dimensionless combinations involving these coupling parameters are
+\begin{equation}
+	\alpha_{0} = g^{2}_{0} \hbar^{(3 - D)} \mu^{(D - 6)} \qquad \alpha_{3} = f^{2}_{3} \hbar^{(7 - D)} \mu^{(D - 6)}
+\end{equation}
+In $D = 4$, the semiclassical approximation leads to $\alpha_{0} \rightarrow \infty$ and $\alpha_{3} \rightarrow 0$. The effective coupling parameter in (\ref{ThreeBodyForce}) is $g_{0}^{3} f_{3}$, which has units
+\begin{equation}
+	[g_{0}^{3} f_{3}] = 2 (D - 4) [\hbar] + 2 (6 - D) [\text{mass}]
+\end{equation}
+so the dimensionless combination is
+\begin{equation}
+	\beta_{3} = g_{0}^{3} f_{3} \hbar^{2(4 - D)} \mu^{2(D - 6)}
+\end{equation}
+Note that, if we keep $g_{0}$ and $f_{3}$ fixed in $D = 4$, the $\hbar \rightarrow 0$ limit keeps $\beta_{3}$ fixed.
+
+One can also consider a scalar four-body force,
+\begin{equation}
+	S_{4}[q_{a}, q_{b}, q_{c}, q_{d}] \equiv g_{0}^{4} \int \int \int \int \mathrm{d}\tau \mathrm{d}\sigma \mathrm{d}\rho \mathrm{d}\omega \, \mathcal{Y}_{4}[q_{a}(\tau) | q_{b}(\sigma) | q_{c}(\rho) | q_{d}(\omega)] \label{FourBodyForce}
+\end{equation}
+with the un-truncated quartic vertex function
+\begin{equation}
+	\mathcal{Y}_{4}(x_{a}|x_{b}|x_{c}|x_{d}) \equiv \frac{f_{4}}{24} \int \mathrm{d}y \, G_{0}(x_{a}|y) G_{0}(x_{b}|y) G_{0}(x_{c}|y) G_{0}(x_{d}|y)
+\end{equation}
+Here the coupling parameter $f_{4}$ has units
+\begin{equation}
+	[f_{4}] = (D - 5) [\hbar] + (4 - D) [\text{mass}]
+\end{equation}
+The effective coupling parameter is now $g_{0}^{4} f_{4}$, with units
+\begin{equation}
+	[g_{0}^{4} f_{4}] = (3D - 11) [\hbar] + (16 - 3D) [\text{mass}]
+\end{equation}
+and thus, the dimensionless combination is
+\begin{equation}
+	\beta_{4} = g_{0}^{4} f_{4} \hbar^{(11 - 3D)} \mu^{(3D - 16)}
+\end{equation}
+If we keep $g_{0}$ and $f_{4}$ in $D = 4$, the $\hbar \rightarrow 0$ limit leads to $\beta_{4} \rightarrow \infty$.
+
+Both (\ref{ThreeBodyForce}) and (\ref{FourBodyForce}) are toy models for the gluon interaction vertices in Yang-Mills theory. In principle, one can evaluate them using the many-body eikonal JWKB approximation and obtain many-body eikonal kernels that might yield information about three- and four-body bound states.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

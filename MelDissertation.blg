@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MelDissertation.aux
+The style file: chetref.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Other/DissBib.bib
+You're missing a field name---line 70 of file Other/DissBib.bib
+ :       
+ :       %url            = "http://dx.doi.org/10.1103/PhysRevD.16.2486"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 83 of file Other/DissBib.bib
+ :       
+ :       %url = {http://dx.doi.org/10.1073/pnas.14.2.178} ,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 310 of file Other/DissBib.bib
+ :       
+ :       %url = {http://arxiv.org/abs/hep-th/9912205},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 324 of file Other/DissBib.bib
+ :  
+ :  %url={http://dx.doi.org/10.1007/BF01397171},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 339 of file Other/DissBib.bib
+ :  
+ :  %url={http://dx.doi.org/10.1007/BF01451751},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 353 of file Other/DissBib.bib
+ :  
+ :  %URL = {http://plms.oxfordjournals.org/content/s2-23/1/428.short},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--no year for journal in VanVleck
+You've used 93 entries,
+            1258 wiz_defined-function locations,
+            1073 strings with 18076 characters,
+and the built_in function-call counts, 36307 in all, are:
+= -- 3622
+> -- 721
+< -- 1801
++ -- 1946
+- -- 226
+* -- 2197
+:= -- 4565
+add.period$ -- 0
+call.type$ -- 93
+change.case$ -- 0
+chr.to.int$ -- 160
+cite$ -- 94
+duplicate$ -- 662
+empty$ -- 2135
+format.name$ -- 196
+if$ -- 7711
+int.to.chr$ -- 0
+int.to.str$ -- 93
+missing$ -- 530
+newline$ -- 587
+num.names$ -- 94
+pop$ -- 302
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 3803
+stack$ -- 0
+substring$ -- 2627
+swap$ -- 662
+text.length$ -- 238
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 332
+width$ -- 95
+write$ -- 813
+(There were 6 error messages)

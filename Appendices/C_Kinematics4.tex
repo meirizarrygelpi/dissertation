@@ -1,0 +1,365 @@
+\chapter{Four-point Scalar Kinematics\label{AppKin4}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this appendix we record many results regarding four-point kinematics. We mostly consider elastic scattering events. An elastic scattering event is one where the incoming content is the same as the outgoing content. With four external quanta, a generic elastic scattering event has the form
+\begin{equation}
+	a(p_{1}) + b(p_{2}) \longrightarrow a(p_{3}) + b(p_{4}) \label{4PointEvent1}
+\end{equation}
+We have external quanta of type $a$ and $b$, with masses $m_{a}$ and $m_{b}$. The total external momentum is conserved,
+\begin{equation}
+	p_{1} + p_{2} = p_{3} + p_{4} \label{PCons}
+\end{equation}
+and each of the external momenta is on-shell,
+\begin{equation}
+	p_{1}^{2} = p_{3}^{2} = -m_{a}^{2} \qquad p_{2}^{2} = p_{4}^{2} = -m_{b}^{2} \label{POnShell}
+\end{equation}
+The constraints (\ref{PCons}) and (\ref{POnShell}) are satisfied by \textit{physical} momenta.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Momentum Invariants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We take stock of the different momentum invariants that are available to describe the event (\ref{4PointEvent1}).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mandelstam Invariants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We have one $s$-type two-quanta invariant,
+\begin{equation}
+	s \equiv s_{12} = s_{34} = - (p_{1} + p_{2})^{2} = - (p_{3} + p_{4})^{2}
+\end{equation}
+and two $t$-type two-quanta invariants,
+\begin{align}
+	t \equiv t_{13} = t_{24} = - (p_{3} - p_{1})^{2} = - (p_{2} - p_{4})^{2} \\
+	u \equiv t_{14} = t_{23} = - (p_{4} - p_{1})^{2} = - (p_{2} - p_{3})^{2}
+\end{align}
+Because of conservation of the total external momentum, the three Mandelstam invariants satisfy the constraint
+\begin{equation}
+	s + t + u = 2 m_{a}^{2} + 2 m_{b}^{2} \label{stuConstraint}
+\end{equation}
+Thus, we can always write one of the Mandelstam invariants (say, $u$) in terms of the other two. Note that $s$ and $u$ are two-body invariants, but $t$ is a one-body invariant.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Gram Invariants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We have four two-quanta Gram invariants,
+\begin{align}
+	G_{12}(s) &= G_{34}(s) = \frac{1}{4} [s - (m_{a} - m_{b})^{2}] [(m_{a} + m_{b})^{2} - s] \\
+	G_{14}(u) &= G_{23}(u) = \frac{1}{4} [u - (m_{a} - m_{b})^{2}] [(m_{a} + m_{b})^{2} - u] \\
+	G_{13}(t) &= \frac{1}{4} t (4m_{a}^{2} - t) \\
+	G_{24}(t) &= \frac{1}{4} t (4m_{b}^{2} - t)
+\end{align}
+and one three-quanta Gram invariant,
+\begin{align}
+	G_{123}(s, t, u) &= G_{234}(s, t, u) = G_{341}(s, t, u) = G_{412}(s, t, u) \nonumber \\
+	&= \frac{1}{4} t \left[ (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} - s u \right]
+\end{align}
+It is useful to know the sign of the Gram invariants. For $G_{12}(s)$, we have
+\begin{align}
+	G_{12}(s) > 0 &\text{ when } (m_{a} - m_{b})^{2} < s < (m_{a} + m_{b})^{2} \\
+	G_{12}(s) < 0 &\text{ when } s < (m_{a} - m_{b})^{2} \text{ or } s > (m_{a} + m_{b})^{2}
+\end{align}
+Similarly, for $G_{14}(u)$:
+\begin{align}
+	G_{14}(u) > 0 &\text{ when } (m_{a} - m_{b})^{2} < u < (m_{a} + m_{b})^{2} \\
+	G_{14}(u) < 0 &\text{ when } u < (m_{a} - m_{b})^{2} \text{ or } u > (m_{a} + m_{b})^{2}
+\end{align}
+Note that $G_{12}(s)$ changes sign at the two-body threshold value $(m_{a} + m_{b})^{2}$, and at the two-body pseudo-threshold value $(m_{a} - m_{b})^{2}$. Similar remarks apply to $G_{14}(u)$ with $s$ replaced by $u$. For $G_{13}(t)$, we have
+\begin{align}
+	G_{13}(t) > 0 &\text{ when } 0 < t < 4m_{a}^{2} \\
+	G_{13}(t) < 0 &\text{ when } t < 0 \text{ or } t > 4m_{a}^{2}
+\end{align}
+and similarly for $G_{24}(t)$:
+\begin{align}
+	G_{24}(t) > 0 &\text{ when } 0 < t < 4m_{b}^{2} \\
+	G_{24}(t) < 0 &\text{ when } t < 0 \text{ or } t > 4m_{b}^{2}
+\end{align}
+Note that $G_{13}(t)$ changes sign at $t = 0$, and at the two-particle threshold $t = (2m_{a})^{2}$. Similar remarks apply to $G_{24}(t)$ with $m_{a}$ replaced by $m_{b}$.
+
+Finally, we consider the three-quanta Gram invariant $G_{123}(s, t, u)$. We have $G_{123}(s, t, u) > 0$ when either
+\begin{equation}
+	t > 0 \text{ and } s u < (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2}
+\end{equation}
+or
+\begin{equation}
+	t < 0 \text{ and } s u > (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2}
+\end{equation}
+Similarly, we have $G_{123}(s, t, u) < 0$ when either
+\begin{equation}
+	t > 0 \text{ and } s u > (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2}
+\end{equation}
+or
+\begin{equation}
+	t < 0 \text{ and } s u < (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2}
+\end{equation}
+Note that $G_{123}(s, t, u)$ changes sign at $t = 0$, and when
+\begin{equation}
+	su = (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2}
+\end{equation}
+which defines a hyperbola in the $(s, u)$ plane.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Center-of-Momentum Frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the center-of-momentum frame, each \textit{incoming} quantum has spatial momentum with magnitude $|\mathbf{p}|$ but opposite direction, and each \textit{outgoing} quantum has spatial momentum with magnitude $|\mathbf{q}|$ but opposite direction. That is,
+\begin{equation}
+	p_{1} = (E_{1}, \mathbf{p}) \qquad p_{2} = (E_{2}, - \mathbf{p}) \qquad p_{3} = (E_{3}, \mathbf{q}) \qquad p_{4} = (E_{4}, -\mathbf{q})
+\end{equation}
+The on-shell constraints (\ref{POnShell}) fix the energy of each quantum in terms of its mass and the magnitude of its momentum,
+\begin{equation}
+\begin{split}
+	E_{1} = \sqrt{ \displaystyle m_{a}^{2} + \mathbf{p}^{2}} \qquad E_{2} = \sqrt{ m_{b}^{2} + \mathbf{p}^{2}} \\
+	E_{3} = \sqrt{ \displaystyle m_{a}^{2} + \mathbf{q}^{2}} \qquad E_{4} = \sqrt{m_{b}^{2} + \mathbf{q}^{2}}
+\end{split} \label{OnShellEs}
+\end{equation}
+Thus,
+\begin{equation}
+	E_{1}^{2} - E_{2}^{2} = m_{a}^{2} - m_{b}^{2} \qquad E_{3}^{2} - E_{4}^{2} = m_{a}^{2} - m_{b}^{2}
+\end{equation}
+From these, it follows that
+\begin{equation}
+	E_{1} = \sqrt{m_{a}^{2} - m_{b}^{2} + E_{2}^{2}} \qquad E_{3} = \sqrt{m_{a}^{2} - m_{b}^{2} + E_{4}^{2}}
+\end{equation}
+Using the definition of $s$, we obtain an equation that relates the sum of the incoming energies, and the sum of the outgoing energies, to $s$:
+\begin{equation}
+	s = (E_{1} + E_{2})^{2} = (E_{3} + E_{4})^{2}
+\end{equation}
+After solving for some of the energies, we find
+\begin{equation}
+	E_{2} = E_{4} = \frac{s - m_{a}^{2} + m_{b}^{2}}{2 \sqrt{s}} \label{E2E4}
+\end{equation}
+and thus
+\begin{equation}
+	E_{1} = E_{3} = \frac{s + m_{a}^{2} - m_{b}^{2}}{2 \sqrt{s}} \label{E1E3}
+\end{equation}
+One can check that (\ref{E2E4}) and (\ref{E1E3}) satisfy
+\begin{equation}
+	E_{1} + E_{2} = E_{3} + E_{4}
+\end{equation}
+as is required by energy conservation.
+
+The magnitude of the velocity $\mathbf{v}$ of a relativistic particle with energy $E$ and mass $m$ is
+\begin{equation}
+	|\mathbf{v}| = \sqrt{1 - \frac{m^{2}}{E^{2}}}
+\end{equation}
+Using (\ref{E2E4}) and (\ref{E1E3}), we find
+\begin{equation}
+	|\mathbf{v}_{1}| = |\mathbf{v}_{3}| = \frac{\sqrt{-4 G_{12}(s)}}{s + m_{a}^{2} - m_{b}^{2}} \qquad |\mathbf{v}_{2}| = |\mathbf{v}_{4}| = \frac{\sqrt{-4 G_{12}(s)}}{s - m_{a}^{2} + m_{b}^{2}}
+\end{equation}
+where
+\begin{equation}
+	G_{12}(s) = \frac{1}{4} [s - (m_{a} - m_{b})^{2}] [(m_{a} + m_{b})^{2} - s]
+\end{equation}
+Note that we can write the $|\mathbf{v}_{j}|$ in terms of dimensionless ratios (e.g. $s/m_{a}^{2}$ and $m_{a} / m_{b}$).
+
+From (\ref{OnShellEs}), it follows that
+\begin{equation}
+\begin{split}
+	(E_{1} E_{2})^{2} = (m_{a}^{2} + \mathbf{p}^{2})(m_{b}^{2} + \mathbf{p}^{2}) \\
+	(E_{3} E_{4})^{2} = (m_{a}^{2} + \mathbf{q}^{2})(m_{b}^{2} + \mathbf{q}^{2})
+\end{split}
+\end{equation}
+Using (\ref{E2E4}) and (\ref{E1E3}), we can solve for $|\mathbf{p}|$ and $|\mathbf{q}|$:
+\begin{equation}
+	|\mathbf{p}| = |\mathbf{q}| = \sqrt{-\frac{G_{12}(s)}{s}} \label{magpq}
+\end{equation}
+The definitions of $t$ and $u$ give other relations:
+\begin{align}
+	t &= 2m_{a}^{2} - 2 E_{1} E_{3} + 2 (\mathbf{p} \cdot \mathbf{q}) = 2m_{b}^{2} - 2 E_{2} E_{4} + 2 (\mathbf{p} \cdot \mathbf{q}) \label{tpq} \\
+	u &= m_{a}^{2} + m_{b}^{2} - 2 E_{1} E_{4} - 2 (\mathbf{p} \cdot \mathbf{q}) = m_{a}^{2} + m_{b}^{2} - 2 E_{2} E_{3} - 2 (\mathbf{p} \cdot \mathbf{q}) \label{upq}
+\end{align}
+The cosine of the scattering angle $\theta_{s}$ is defined as
+\begin{equation}
+	z_{s} \equiv \cos{(\theta_{s})} = \frac{\mathbf{p} \cdot \mathbf{q}}{|\mathbf{p}| |\mathbf{q}|}
+\end{equation}
+We can use either (\ref{tpq}) or (\ref{upq}) to find
+\begin{equation}
+	z_{s} = \frac{s u - (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} - s t}{4 G_{12}(s)}
+\end{equation}
+Using
+\begin{align}
+	4 G_{12}(s) &= [s - (m_{a} - m_{b})^{2}] [(m_{a} + m_{b})^{2} - s] \nonumber \\
+	&= su - (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} + st
+\end{align}
+we can write $z_{s}$ as
+\begin{equation}
+	z_{s} = \frac{s u - (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} - s t}{su - (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} + st} \label{zFrac}
+\end{equation}
+If $m_{a} = m_{b}$ we recover the familiar
+\begin{equation}
+	z_{s} = \frac{u - t}{u + t}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Physical Scattering Region\label{PhysScatReg}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In order for the energies $E_{j}$ in (\ref{E2E4}) and (\ref{E1E3}) to be \textit{real} and \textit{finite} we must require that $s > 0$. Similarly, in order for $|\mathbf{p}|$ and $|\mathbf{q}|$ in (\ref{magpq}) to be \textit{real} and \textit{finite} we must require $G_{12}(s) < 0$. Finally, the scattering angle $\theta_{s}$ must be such that its cosine has the appropriate range,
+\begin{equation}
+	{-1} < z_{s} < 1
+\end{equation}
+Using (\ref{zFrac}) and $G_{12}(s) < 0$ on the lower limit gives
+\begin{equation}
+	s u < (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2}
+\end{equation}
+Similarly, the upper limit gives
+\begin{equation}
+	st < 0 \quad \Longrightarrow \quad t < 0
+\end{equation}
+Hence, the \textbf{physical scattering region} is defined by
+\begin{equation}
+	s > 0 \qquad G_{12}(s) < 0 \qquad t < 0 \qquad s u < (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} \label{PSRs}
+\end{equation}
+We can state these conditions in terms of the Gram invariants,
+\begin{equation}
+	s > 0 \qquad G_{12}(s) < 0 \qquad G_{123}(s, t, u) < 0
+\end{equation}
+Outside of the physical scattering region we have the bonding region, where physical bound states exist.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Crossing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A crossing transformation amounts to switching an incoming quantum $q_{I}$ with momentum $p_{I}$ and electric charge $Z_{I}$, with an outgoing quantum $q_{O}$ with momentum $p_{O}$ and electric charge $Z_{O}$. That is, from the event
+\begin{equation}
+	q_{I}(p_{I}, Z_{I}) + \ldots \longrightarrow q_{O}(p_{O}, Z_{O}) + \ldots
+\end{equation}
+one obtains the event
+\begin{equation}
+	\bar{q}_{O}(\bar{p}_{I}, \bar{Z}_{I}) + \ldots \longrightarrow \bar{q}_{I}(\bar{p}_{O}, \bar{Z}_{O}) + \ldots
+\end{equation}
+with
+\begin{equation}
+	\bar{p}_{I} = -p_{O} \qquad \bar{Z}_{I} = -Z_{O} \qquad \bar{p}_{O} = -p_{I} \qquad \bar{Z}_{O} = -Z_{I}
+\end{equation}
+
+A \textit{pure crossing} involves crossing an incoming quantum with an outgoing quantum of the \textit{same} type. One can also perform a \textit{mixed crossing}, which amounts to crossing an incoming quantum with an outgoing quantum of \textit{different} type. If the starting event is elastic, then a pure crossing will yield another elastic event, but a mixed crossing will yield an inelastic event. We can act on event (\ref{4PointEvent1}) with a pure crossing transformation and obtain another elastic scattering event. 
+
+For example, after crossing the incoming $b$ quantum with the outgoing $b$ quantum in (\ref{4PointEvent1}), we obtain the elastic event
+\begin{equation}
+	a(p_{1}) + \bar{b}(\bar{p}_{2}) \longrightarrow a(p_{3}) + \bar{b}(\bar{p}_{4}) \label{4PointEvent2}
+\end{equation}
+with
+\begin{equation}
+	\bar{p}_{2} = - p_{4} \qquad \bar{p}_{4} = - p_{2}
+\end{equation}
+For event (\ref{4PointEvent2}), the center-of-momentum energy is
+\begin{equation}
+	\bar{s} = -(p_{1} + \bar{p}_{2})^{2} = -(p_{1} - p_{4})^{2} = u
+\end{equation}
+and the momentum transfer invariants are
+\begin{align}
+	\bar{t} &= -(p_{1} - p_{3})^{2} = t \\
+	\bar{u} &= -(p_{1} - \bar{p}_{4})^{2} = -(p_{1} + p_{2})^{2} = s
+\end{align}
+Thus, we can use the Mandelstam invariants for event (\ref{4PointEvent1}) to also describe event (\ref{4PointEvent2}), with the caveat that $s$ and $u$ switch roles. The physical scattering region for event (\ref{4PointEvent2}), in terms of the invariants for event (\ref{4PointEvent1}), is given by
+\begin{equation}
+	u > 0 \qquad t < 0 \qquad G_{14}(u) < 0 \qquad s u < (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} \label{PSRu}
+\end{equation}
+which is \textit{different} from that of event (\ref{4PointEvent1}). Note that the invariant $t$ plays the same role in (\ref{PSRs}) and (\ref{PSRu}).
+
+Similarly, we can cross the incoming $a$ quantum with the outgoing $a$ quantum in (\ref{4PointEvent1}) to obtain the event
+\begin{equation}
+	\bar{a}(\bar{p}_{1}) + b(p_{2}) \longrightarrow \bar{a}(\bar{p}_{3}) + b(p_{4}) \label{4PointEvent3} 
+\end{equation}
+with
+\begin{equation}
+	\bar{p}_{1} = -p_{3} \qquad \bar{p}_{3} = - p_{1}
+\end{equation}
+It should be no surprise that the Mandelstam invariants for event (\ref{4PointEvent3}) are the same as the invariants for event (\ref{4PointEvent2}), since these two events are conjugate. Hence, events (\ref{4PointEvent2}) and (\ref{4PointEvent3}) share the same physical scattering region.
+
+Doing both of the pure crossings mentioned above leads to the event
+\begin{equation}
+	\bar{a}(\bar{p}_{1}) + \bar{b}(\bar{p}_{2}) \longrightarrow \bar{a}(\bar{p}_{3}) + 	\bar{b}(\bar{p}_{4}) \label{4PointEvent4}
+\end{equation}
+which is conjugate to event (\ref{4PointEvent1}).
+
+Although the scattering amplitude for event (\ref{4PointEvent1}) can describe events (\ref{4PointEvent2}), (\ref{4PointEvent3}), and (\ref{4PointEvent4}) after appropriate crossings, it is not true that all of these elastic events are physically equivalent. Event (\ref{4PointEvent1}) has another interpretation: the propagation of the bound state $ab$. Similarly, event (\ref{4PointEvent2}) can be interpreted as the propagation of the bound state $a \bar{b}$. Events (\ref{4PointEvent3}) and (\ref{4PointEvent4}) correspond to propagation of the antiparticles $b\bar{a}$ and $\bar{b}\bar{a}$, respectively. Thus, we have \textit{two} distinct two-body bound states ($ab$ and $a \bar{b}$) and the corresponding antiparticles. If $a$ and $b$ carry electric charge, then the bound states $ab$ and $a \bar{b}$ have different electromagnetic properties. Indeed, if the product of the charges $Z_{a} Z_{b}$ is positive, then we only have the bound state $a \bar{b}$. On the other hand, if the product $Z_{a}Z_{b}$ is negative, then we only have the bound state $ab$. If the bonding is due to gravity, then both bound states are allowed.
+
+Besides the two pure crossings, one can perform two mixed crossings on event (\ref{4PointEvent1}). Both mixed crossings will yield an inelastic event. After crossing the incoming $b$ quantum with the outgoing $a$ quantum in event (\ref{4PointEvent1}), we obtain the event
+\begin{equation}
+	a(p_{1}) + \bar{a}(\bar{p}_{2}) \longrightarrow \bar{b}(\bar{p}_{3}) + b(p_{4}) \label{4PointEvent5}
+\end{equation}
+with
+\begin{equation}
+	\bar{p}_{2} = - p_{3} \qquad \bar{p}_{3} = - p_{2}
+\end{equation}
+For event (\ref{4PointEvent5}), the center-of-momentum energy is
+\begin{equation}
+	\bar{s} \equiv - (p_{1} + \bar{p}_{2})^{2} = -(p_{1} - p_{3})^{2} = t
+\end{equation}
+and the momentum transfer invariants are
+\begin{align}
+	\bar{t} &\equiv - (p_{1} - \bar{p}_{3})^{2} = -(p_{1} + p_{2})^{2} = s \\
+	\bar{u} &\equiv - (p_{1} - p_{4})^{2} = u
+\end{align}
+Similarly, crossing the incoming $a$ quantum with the outgoing $b$ quantum in event (\ref{4PointEvent1}) leads to the event
+\begin{equation}
+	\bar{b}(\bar{p}_{1}) + b(p_{2}) \longrightarrow a(p_{3}) + \bar{a}(\bar{p}_{4}) \label{4PointEvent6}
+\end{equation}
+with
+\begin{equation}
+	\bar{p}_{1} = - p_{4} \qquad \bar{p}_{4} = - p_{1}
+\end{equation}
+Event (\ref{4PointEvent6}) is conjugate to event (\ref{4PointEvent5}). Thus, these two events share the same Mandelstam invariants. In terms of the Mandelstam invariants for event (\ref{4PointEvent1}), the physical scattering region is
+\begin{equation}
+	t > 4m_{a}^{2} \qquad t > 4m_{b}^{2} \qquad s u > (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} \label{PSRt}
+\end{equation}
+with $s < 0$ and $u < 0$. The scattering angle is now given by
+\begin{equation}
+	z_{t} \equiv \cos{(\theta_{t})} = \frac{s - u}{\sqrt{(s + u)^{2} - 4 (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} }}
+\end{equation}
+
+We refer to the events (\ref{4PointEvent1}) and (\ref{4PointEvent4}) as the $s$-channel events, (\ref{4PointEvent5}) and (\ref{4PointEvent6}) as the $t$-channel events, and (\ref{4PointEvent2}) and (\ref{4PointEvent3}) as the $u$-channel events.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Types of Scattering Regimes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Some special types of scattering regimes are described below.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forward Scattering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Forward scattering involves small scattering angle. In the $s$-channel, we have $z_{s} \rightarrow 1$. We first write $z_{s}$ in terms of $s$ and $t$:
+\begin{equation}
+	z_{s} = 1 + \frac{2 s t}{[s - (m_{a} - m_{b})^{2}] [s - (m_{a} + m_{b})^{2}]}
+\end{equation}
+In terms of dimensionless ratios, we have
+\begin{equation}
+	z_{s} = 1 + \frac{1}{2} \left( \frac{t}{m_{a} m_{b}} \right) \left( \frac{s}{m_{a} m_{b}} \right) \left[ \left( \frac{s - m_{a}^{2} - m_{b}^{2}}{2 m_{a} m_{b}} \right)^{2} - 1 \right]^{-1}
+\end{equation}
+Thus, the $z_{s} \rightarrow 1$ limit is equivalent to
+\begin{equation}
+	\frac{t}{m_{a} m_{b}} \rightarrow 0 \qquad \text{fixed } \frac{s}{m_{a} m_{b}} \qquad \text{fixed } \frac{m_{a}}{m_{b}}
+\end{equation}
+As a corollary, we have
+\begin{equation}
+	\frac{t}{s} \rightarrow 0 \qquad \frac{t}{u} \rightarrow 0 \qquad \text{fixed } \frac{u}{m_{a} m_{b}}
+\end{equation}
+Hence, forward scattering in the $s$-channel corresponds to the regime of small momentum transfer.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Backward Scattering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the $s$-channel, backward scattering involves $z_{s} \rightarrow - 1$. After writing $z_{s}$ as
+\begin{equation}
+	z_{s} = \frac{2(m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2} - 2 s u}{[s - (m_{a} - m_{b})^{2} ] [s - (m_{a} + m_{b})^{2}]} - 1
+\end{equation}
+one finds that backward scattering is equivalent to
+\begin{equation}
+	s u \rightarrow (m_{a} + m_{b})^{2} (m_{a} - m_{b})^{2}
+\end{equation}
+This regime can be stated as
+\begin{equation}
+	\frac{u}{m_{a} m_{b}} \rightarrow \frac{m_{a} m_{b}}{s} \left( 1 + \frac{m_{b}}{m_{a}} \right)^{2} \left( 1 - \frac{m_{a}}{m_{b}} \right)^{2} \quad \text{fixed } \frac{s}{m_{a} m_{b}} \quad \text{fixed } \frac{m_{a}}{m_{b}}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fixed-angle Scattering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Fixed-angle scattering involves keeping $z_{s}$ fixed in the regime where all Mandelstam invariants are large. That is,
+\begin{equation}
+	\frac{m_{a} m_{b}}{t} \rightarrow 0 \qquad \text{fixed } \frac{s}{t} \qquad \text{fixed } \frac{m_{a}}{m_{b}}
+\end{equation}
+As a corollary, we have
+\begin{equation}
+	\frac{m_{a} m_{b}}{s} \rightarrow 0 \qquad \frac{m_{a} m_{b}}{u} \rightarrow 0 \qquad \text{fixed } \frac{u}{t}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Regge Scattering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Suppose we compute the scattering amplitude $\mathcal{A}_{s}$ for the $s$-channel event at large energy $s$ and fixed transfer $t$. This amplitude can be analytically continued to describe the $t$-channel event, but with fixed energy $\bar{s}= t$ and large transfer $\bar{t} = s$. Similarly, if we compute the scattering amplitude $\mathcal{A}_{t}$ for the $t$-channel event at large energy $\bar{s} = t$ and fixed transfer $\bar{t} = s$, we can analytically continue and describe the $s$-channel event at fixed energy $s$ and large momentum transfer $t$. This is the main motivation behind Regge scattering, which corresponds to the $z_{s} \rightarrow \infty$ limit. This is equivalent to
+\begin{equation}
+	\frac{t}{m_{a} m_{b}} \rightarrow \infty \qquad \text{fixed } \frac{s}{m_{a} m_{b}} \qquad \text{fixed } \frac{m_{a}}{m_{b}}
+\end{equation}
+This limit takes us outside of the physical scattering region. Thus, in this regime we have the possibility of dealing with bound states in some way.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Diffraction Scattering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Diffraction scattering refers to ``processes where the cross-section does not disappears at high-energies, but approaches a constant''. (From the review by Zachariasen).

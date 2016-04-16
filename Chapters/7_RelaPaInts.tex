@@ -1,0 +1,115 @@
+\chapter{Relativistic Path Integrals\label{ChRelaPaths}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this chapter we introduce the relativistic analogs of the quantum and semiclassical kernels that were introduced in chapter \ref{ChNRPaths}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Note}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Starting in this chapter, and unless otherwise specified, we set $\hbar = 1$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quantum Kernels}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In nonrelativistic quantum mechanics we first introduced the quantum kernel as a sort of ``metric tensor'' in the inner product between two state vectors in the Hilbert space (see section \ref{NRQuaKer}). There are different ways to describe the Hilbert space, according to whether the state vectors carry the time dependence (the Schr\"{o}dinger picture), or the operators do (the Heisenberg picture). The culmination is either the Schr\"{o}dinger equation for the wavefunction, or the Heisenberg equation for the operators. Both of these relate the time evolution to the spatial evolution. But this description is, of course, not compatible with Lorentz symmetry.
+
+The other formulation of the nonrelativistic quantum kernel is as a path integral. The classical description of the nonrelativistic problem is key for constructing this path integral, since the classical action functional appears in it. Classically, we describe a relativistic system with parametrized spacetime variables. Instead of developing the relativistic analogs of the Sch\"{o}dinger and Heisenberg pictures (along with all the acrobatics in the Hilbert space), we will generalize the path integral formulation to accommodate the relativistic theory.
+
+In Lagrangian form, the action for a free massive scalar particle is
+\begin{equation}
+	S_{0}[q, v] = \int \mathrm{d}\tau \left[- \frac{1}{2v} \dot{q}^{2} + \frac{v}{2} m^{2} \right]
+\end{equation}
+Since we have two functional variables ($q(\tau)$ and $v(\tau)$), the quantum kernel should involve a functional integration over both variables. We \textit{define} the \textbf{quantum kernel} for a (not necessarily free) massive particle as
+\begin{equation}
+	\mathcal{F}(O|I) \equiv \int \mathrm{D}v(\tau) \int\limits_{x_{I}}^{x_{O}} \mathrm{D}q(\tau) \exp{\left( -i S[q, v] \right)}
+\end{equation}
+Integrating over $v$ is analogous to using the equation of motion to solve for $v$ in terms of $q$. As we already mentioned, we are not going to do this. We will instead perform a gauge-fixing that essentially amounts to setting $v = 1$. This procedure does not remove $v$ entirely, but leaves the ``global'' part. After gauge-fixing, the relativistic path integral becomes
+\begin{equation}
+	\mathcal{F}(O|I) = \int\limits_{0}^{\infty} \mathrm{d}T \int\limits_{x_{I}}^{x_{O}} \mathrm{D}q(\tau) \exp{\left( -i S[q, T] \right)}
+\end{equation}
+where the integral over the modulus $T$ is a traditional integral (i.e. not functional). In contrast with (\ref{FeynPath}), the main difference between the relativistic and nonrelativistic path integrals is the integration over the modulus. For this reason, we introduce the \textbf{un-integrated quantum kernel} $\mathcal{F}_{T}$
+\begin{equation}
+	\mathcal{F}(O|I) = \int\limits_{0}^{\infty} \mathrm{d}T \mathcal{F}_{T}(O|I)
+\end{equation}
+That is,
+\begin{equation}
+	\mathcal{F}_{T}(O|I) \equiv \int\limits_{x_{I}}^{x_{O}} \mathrm{D}q(\tau) \exp{\left( -i S[q, T] \right)}
+\end{equation}
+which is completely analogous to (\ref{FeynPath}), albeit modulus-dependent. We will exploit this analogy and use $\mathcal{F}_{T}$ to define relativistic analogs of all the tools introduced in chapter \ref{ChNRPaths}. Working with un-integrated kernels is not a problem as long as we remember that the true quantum description is obtained after integrating over the modulus.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{S-Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In what follows we will assume that the proper gauge-fixing procedure has already been carried out. By analogy with (\ref{SMatrixF}), we \textit{define} the \textbf{un-integrated S-matrix} by
+\begin{equation}
+	\mathcal{S}_{T}(O|I) = \int \int \mathrm{d}x_{I} \mathrm{d}x_{O} \overline{\mathcal{W}}_{O}(O) \mathcal{W}_{I}(I) \mathcal{F}_{T}(O|I)
+\end{equation}
+where $\overline{\mathcal{W}}_{O}$ and $\mathcal{W}_{I}$ are the relativistic analogs of $\overline{\mathcal{U}}_{O}$ and $\mathcal{U}_{I}$:
+\begin{align}
+	\mathcal{W}_{I}(I) &= \exp{\left[ \frac{i T}{4} \left( p_{I}^{2} + m_{I}^{2} \right) + i x_{I} \cdot p_{I} \right]} \\
+	\overline{\mathcal{W}}_{O}(O) &= \exp{\left[\frac{i T}{4} \left( p_{O}^{2} + m_{O}^{2} \right) -i x_{O} \cdot p_{O} \right]}
+\end{align}
+Before integrating over the modulus $T$, the masses of the ``in'' and ``out'' quanta are different from the particle mass $m$ that appears in the action functional. Constraints will result from the integration over the modulus that relate the external masses $m_{I}$ and $m_{O}$ to the internal mass $m$. This sounds a bit odd, but it works. Part of the truncation will involve removing these constraints.
+
+The nonrelativistic asymptotic S-matrix is replaced by the \textbf{integrated S-matrix},
+\begin{equation}
+	\mathcal{A}(O|I) \equiv \int\limits_{0}^{\infty} \mathrm{d}T \mathcal{S}_{T}(O|I)
+\end{equation}
+At this stage, the external momenta are still off-shell. Before we can put them on-shell, we have to perform a truncation. We will see how this works experimentally in chapter \ref{Ch4Sca}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Semiclassical Kernels}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+After gauge-fixing at the level of the classical theory, we go from an action functional $S[q, v]$ to an action functional $S[q, T]$. In practice, this later functional is the one that is used to find classical paths. We \textit{define} the integrated \textbf{semiclassical kernel} $\mathcal{V}$ by
+\begin{equation}
+	\mathcal{V}(O|I) \equiv \int\limits_{0}^{\infty} \mathrm{d}T \sqrt{-\det{(V)}} \exp{\left( -i \Sigma \right)}
+\end{equation}
+The sign with the determinant follows from working in Minkowski signature. Here, just like before, the \textbf{Van Vleck function} $\Sigma$ corresponds to the value of the action functional at the classical path, and the \textbf{Van Vleck matrix} $V$ is defined by
+\begin{equation}
+	V = -i \frac{\partial^{2} \Sigma}{\partial x_{I} \partial x_{O}}
+\end{equation}
+In practice it is more convenient to work with the \textbf{un-integrated semiclassical kernel} $\mathcal{V}_{T}$,
+\begin{equation}
+	\mathcal{V}_{T}(O|I) \equiv \sqrt{-\det{(V)}} \exp{\left( -i \Sigma \right)} \label{SemiClassRela}
+\end{equation}
+which is completely analogous to (\ref{SemiClass}). However, we will not derive (\ref{SemiClassRela}). Since our definition of the relativistic semiclassical kernel is based on the relativistic path integral, a proper way to derive (\ref{SemiClassRela}) should rely on functional methods. In principle, after gauge-fixing $v = 1$, we can formulate a ``Schr\"{o}dinger equation'' with the worldline parameter playing the role of time. Then one could ``derive'' (\ref{SemiClassRela}) in the same way the nonrelativistic case was derived in section \ref{NRSemiKer}. This method does not generalize to many-body systems, since one has multiple worldlines and thus multiple worldline parameters.
+
+The relativistic analog of the de Broglie wavelength is the Compton wavelength,
+\begin{equation}
+	\lambda_{C} = \frac{2 \pi \hbar}{m c}
+\end{equation}
+In the relativistic semiclassical approximation, $\lambda_{C}$ is small compared to the other distances in the problem. This means that the mass $m$ is very large compared to other mass scales. In contrast with the nonrelativistic semiclassical approximation, we argue that the relativistic semiclassical approximation is not necessarily a high-energy approximation. This will be more clear when we consider two-body systems.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Semiclassical S-Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{un-integrated semiclassical S-matrix} is defined in complete analogy with (\ref{SemiSMatrix}):
+\begin{equation}
+	\mathcal{S}_{T}(p_{O}| p_{I}) \approx \int \int \mathrm{d}x_{I} \mathrm{d}x_{O} \overline{\mathcal{W}}_{O}(O) \mathcal{W}_{I}(I) \mathcal{V}_{T}(O|I)
+\end{equation}
+Similarly, we can define the \textbf{integrated semiclassical S-matrix}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Semiclassical Eikonal Kernels}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the relativistic theory, the \textbf{eikonal path} describes a line in \textit{spacetime},
+\begin{equation}
+	e(\tau) = \frac{x_{I} + x_{O}}{2} + \left( x_{O} - x_{I} \right) \left( \frac{\tau}{T} \right)
+\end{equation}
+Just like in the nonrelativistic theory, the range of the worldline parameter is
+\begin{equation}
+	{- \frac{T}{2} } < \tau < \frac{T}{2}, \qquad T > 0
+\end{equation}
+This parametrization is convenient since it is symmetric with center at $\tau = 0$. This choice explains the appearance of $T$ in $\overline{\mathcal{W}}_{O}$ and $\mathcal{W}_{I}$. As we will see later, this choice of parametrization makes clear which terms need to be truncated before putting the external states on the mass-shell.
+
+The \textbf{semiclassical eikonal kernel} and the corresponding \textbf{semiclassical eikonal S-matrix} are defined in the analogous way.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Many-body Systems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+One can study relativistic many-body systems by considering path integrals with many functional variables. The main difference is that in the relativistic theory each body is described by a different worldline. Each worldline has a different parametrization. Thus, after gauge fixing, we are left with more than one modulus.
+
+For example, the integrated quantum kernel for a two-body system with particles $a$ and $b$ has the form
+\begin{equation}
+	\mathcal{F}(3, 4|1, 2) = \int\limits_{0}^{\infty} \mathrm{d}T_{a} \int\limits_{0}^{\infty} \mathrm{d}T_{b} \, \mathcal{F}_{T}(3, 4|1, 2)
+\end{equation}
+with the un-integrated quantum kernel given by
+\begin{equation}
+	\mathcal{F}_{T}(3, 4|1, 2) = \int\limits_{x_{1}}^{x_{3}} \mathrm{D}q_{a}(\tau) \int\limits_{x_{2}}^{x_{4}} \mathrm{D}q_{b}(\sigma) \exp{\left( - i S[q_{a}, q_{b}] \right)}
+\end{equation}
+The range of the worldline parameters $\tau$ and $\sigma$ are
+\begin{equation}
+	{- \frac{T_{a}}{2} } < \tau < \frac{T_{a}}{2} \qquad {- \frac{T_{b}}{2} } < \sigma < \frac{T_{b}}{2}, \qquad T_{a} > 0, \qquad T_{b} > 0
+\end{equation}

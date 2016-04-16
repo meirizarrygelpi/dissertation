@@ -1,0 +1,213 @@
+\section{Massive Scalar Exchange\label{SecMassiveSca4}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The methods used in the previous three sections can be applied to problems where the exchange quanta is massive. In this section we study the case when the external particles exchange massive scalar quanta with mass $M$. In the eikonal approximation, the momentum transfer $t$ is small compared to $M^{2}$. By Fourier-Heisenberg conjugacy, the separation between the particles is very large compared to $1/M$.
+
+We follow similar steps as in section \S\ref{SecMasslessSca4} to derive the two-body semiclassical eikonal kernel. The two-body action functional $S_{\Phi}$ is
+\begin{equation}
+	S_{\Phi}[q_{a}, q_{b}] = S_{0}[q_{a}, q_{b}] - S_{2}^{\Phi}[q_{a}, q_{b}]
+\end{equation}
+with the two-body interaction term $S_{2}^{\Phi}$ given by
+\begin{equation}
+	S_{2}^{\Phi}\left[q_{a}, q_{b} \right] \equiv g^{2}_{0} \int \int \mathrm{d}\tau \mathrm{d}\sigma \, G_{M} \left[ q_{a}(\tau) | q_{b}(\sigma) \right] \label{S2ScaM}
+\end{equation}
+Here $G_{M}$ is the massive scalar Green function,
+\begin{equation}
+	G_{M}(x|y) \equiv \int\limits_{0}^{\infty} \mathrm{d} T_{M} \left( - \frac{i}{T_{M}} \right)^{D/2} \exp{\left[ \frac{i}{2 T_{M}} (y - x)^{2} - \frac{i M^{2} T_{M}}{2} \right]}
+\end{equation}
+Just like in section \S\ref{SecMasslessSca4}, the coupling parameter $g_{0}$ is dimensionful. However, instead of (\ref{g2Sca}), in $D = 4$ we now use
+\begin{equation}
+	g^{2}_{0} = \frac{\alpha_{0}}{(2 \pi)^{3/2}} \mu^{(4-D)}
+\end{equation}
+with $\mu$ and $\sqrt{\alpha_{0}}$ having units of mass. This choice of normalization is convenient to eliminate unwanted factors of $2\pi$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Eikonal Van Vleck Function}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+At the eikonal paths (\ref{eikConf2}) we have
+\begin{align}
+	\Sigma_{2}^{\Phi} &\equiv S_{2}^{\Phi}\left[e_{a}, e_{b} \right] \nonumber \\
+	&= g^{2}_{0} \int \int \mathrm{d}\tau \mathrm{d}\sigma \, G_{M} \left[ e_{a}(\tau) | e_{b}(\sigma) \right] \nonumber \\
+	&\approx \frac{\alpha_{0} \rho_{0} \mu^{(4 - D)}}{\sqrt{2 \pi}} \int\limits_{0}^{\infty} \mathrm{d} T_{M} \left( - \frac{i}{T_{M}} \right)^{(D - 2)/2} \exp{\left( \frac{i}{2 T_{M}} B_{12}^{2} - \frac{i M^{2} T_{M}}{2} \right)} \nonumber \\
+	&\approx {-i \alpha_{0} \rho_{0}} \left( \frac{M}{\mu} \right)^{(D - 4)} \left( i \sqrt{-M^{2} B_{12}^{2}} \right)^{(3 - D)/2} \exp{\left(- i \sqrt{-M^{2} B_{12}^{2}} \right)} \nonumber
+\end{align}
+where $\rho_{0}$ is given by (\ref{rho0Def}). To get the third line we integrated over $\tau$ and $\sigma$ with stationary methods. To get the fourth line we integrated over $T_{M}$ with stationary methods. Both of these steps are valid in the eikonal approximation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Eikonal S-Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With $\Sigma_{2}^{\Phi}$, we have
+\begin{equation}
+\begin{split}
+	{-1} + \exp{(i \Sigma_{2}^{\Phi})} = \sum_{l = 1}^{\infty} {}& \frac{(\alpha_{0} \rho_{0})^{l}}{\Gamma(l + 1)} \left( \frac{M}{\mu} \right)^{l(D - 4)} \left( i \sqrt{-M^{2} B_{12}^{2}} \right)^{l(3 - D)/2} \\
+	&\times \exp{\left(- i l \sqrt{-M^{2} B_{12}^{2}} \right)}
+\end{split}
+\end{equation}
+which can be written as a double sum,
+\begin{equation}
+\begin{split}
+	{-1} + \exp{(i \Sigma_{2}^{\Phi})} = \sum_{l = 1}^{\infty} \sum_{n = 0}^{\infty} {}& \frac{(\alpha_{0} \rho_{0})^{l}}{\Gamma(l + 1)} \frac{(-l)^{n}}{\Gamma(n + 1)} \left( \frac{M}{\mu} \right)^{l(D - 4)} \\
+	&\times \left( -2 \right)^{Y_{nl}} \left(- \frac{2}{M^{2} B_{12}^{2}} \right)^{Z_{nl}}
+\end{split} \label{EikonalFormMassive}
+\end{equation}
+Here we have denoted
+\begin{equation}
+	Y_{nl} \equiv \frac{l(3 - D)}{4} + \frac{n}{2}, \qquad Z_{nl} \equiv - Y_{nl} = \frac{l(D - 3)}{4} - \frac{n}{2}
+\end{equation}
+Before truncation, the scattering amplitude is
+\begin{equation}
+	\mathcal{A}_{\Phi} = \frac{1}{\rho_{0}} \mathcal{N} \delta(P) \int \mathrm{d}B_{12} \left[ -1 + \exp{(i \Sigma_{2}^{\Phi})} \right] \exp{(- i B_{12} \cdot P_{12})} \label{MassiveEikonalForm}
+\end{equation}
+After integrating over $B_{12}$, we find
+\begin{equation}
+\begin{split}
+	\mathcal{A}_{\Phi}(3, 4|1,2) = {}& \alpha_{0} \mathcal{N} \delta(P) (iM)^{(2-D)} \left( \frac{M}{\mu} \right)^{(D - 4)} \\
+	&\times \sum_{L = 0}^{\infty} \frac{(\alpha_{0} \rho_{0})^{L}}{\Gamma(L+2)} \left( \frac{M}{\mu} \right)^{L(D - 4)} \mathcal{M}_{L}(t)
+\end{split}
+\end{equation}
+where $\mathcal{M}_{L}(t)$ is defined as
+\begin{equation}
+	\mathcal{M}_{L}(t) \equiv \sum_{n = 0}^{\infty} \frac{(-L-1)^{n}}{\Gamma(n + 1)} (-2)^{Y(n, L)} \frac{\Gamma[W(n, L)]}{\Gamma[Z(n, L)]} \left( \frac{2M^{2}}{t} \right)^{W(n, L)}
+\end{equation}
+Here we have introduced
+\begin{align}
+	Y(n, L) &\equiv Y_{0}(L) + \frac{n}{2} \\
+	Z(n, L) &\equiv Z_{0}(L) - \frac{n}{2} \\
+	W(n, L) &\equiv W_{0}(L) + \frac{n}{2}
+\end{align}
+with
+\begin{align}
+	Y_{0}(L) &\equiv \frac{(L + 1)(3 - D)}{4} \\
+	Z_{0}(L) &\equiv \frac{(L + 1)(D - 3)}{4} \\
+	W_{0}(L) &\equiv \frac{D - 2}{2} - \frac{(L + 1)(D - 3)}{4}
+\end{align}
+We define the truncated on-shell scattering amplitude by
+\begin{equation}
+	\widehat{\mathcal{A}}_{\Phi}(s, t, u) \equiv \left( \frac{\mu^{(D - 4)}}{\mathcal{N}} \right) \mathcal{A}_{\Phi}(3, 4|1,2)
+\end{equation}
+Thus,
+\begin{equation}
+	\widehat{\mathcal{A}}_{\Phi}(s, t, u) = \frac{\alpha_{0}}{M^{2}} \delta(P) i^{(2 - D)} \sum_{L = 0}^{\infty} \frac{[\alpha_{0} \rho_{0}(s, u)]^{L}}{\Gamma(L+2)} \left( \frac{M}{\mu} \right)^{L(D - 4)} \mathcal{M}_{L}(t) \label{AHatPhiM}
+\end{equation}
+
+The sum in $\mathcal{M}_{L}$ can be evaluated if we split it into the sum over even and odd integers:
+\begin{equation}
+	\mathcal{M}_{L}(t) = \mathcal{E}_{L}(t) + \mathcal{O}_{L}(t)
+\end{equation}
+Then each contribution can be evaluated separately, to give
+\begin{align}
+	\mathcal{E}_{L}(t) = {}& (-1)^{Y_{0}} 2^{(W_{0} + Y_{0})} \frac{\Gamma(W_{0})}{\Gamma(Z_{0})} \left( \frac{M^{2}}{t} \right)^{W_{0}} \nonumber \\
+	&\times {}_{2} F_{1} \left(W_{0}, 1 - Z_{0}, \frac{1}{2}, \frac{(L+1)^{2} M^{2}}{t} \right) \\
+	\mathcal{O}_{L}(t) = {}& -(L+1) (-1)^{\tilde{Y}_{0}} 2^{(\tilde{W}_{0} + \tilde{Y}_{0})} \frac{\Gamma(\tilde{W}_{0})}{\Gamma(\tilde{Z}_{0})} \left( \frac{M^{2}}{t} \right)^{\tilde{W}_{0}} \nonumber \\
+	&\times {}_{2} F_{1} \left(\tilde{W}_{0}, 1 - \tilde{Z}_{0}, \frac{3}{2}, \frac{(L+1)^{2} M^{2}}{t} \right)
+\end{align}
+where, for neatness, we have introduced
+\begin{equation}
+	\tilde{Y}_{0}(L) \equiv Y_{0}(L) + \frac{1}{2} \quad \tilde{Z}_{0}(L) \equiv Z_{0}(L) - \frac{1}{2}, \quad \tilde{W}_{0}(L) \equiv W_{0}(L) + \frac{1}{2}
+\end{equation}
+Here, ${}_{2} F_{1}$ is the Gauss hypergeometric function.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Perturbative Amplitudes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The result (\ref{AHatPhiM}) for the scattering amplitude has form of a perturbative expansion, but each perturbative amplitudes appears to be quite complicated for generic spacetime dimension. We consider two specific cases.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Three Dimensions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With $D = 3$, we have
+\begin{equation}
+	Y_{0}(L) = 0, \qquad Z_{0}(L) = 0, \qquad W_{0}(L) = \frac{1}{2}
+\end{equation}
+and
+\begin{equation}
+	\tilde{Y}_{0}(L) = \frac{1}{2} , \qquad \tilde{Z}_{0}(L) = - \frac{1}{2}, \qquad \tilde{W}_{0}(L) = 1
+\end{equation}
+The expressions for $\mathcal{E}_{L}$ and $\mathcal{O}_{L}$ simplify greatly:
+\begin{equation}
+	\mathcal{E}_{L}(t) = 0, \qquad \mathcal{O}_{L}(t) = -i \sqrt{\frac{2}{\pi}} (L+1) \left[ \frac{M^{2}}{(L+1)^{2} M^{2} - t} \right] \label{ELOL3}
+\end{equation}
+The form of $\mathcal{O}_{L}$ is suggestive. At $L$-loops, $\mathcal{O}_{L}$ has a simple pole when
+\begin{equation}
+	t = (L+1)^{2} M^{2} = [(L+1) M]^{2}
+\end{equation}
+These singularities correspond to the usual multi-mass branch points. It is somewhat curious that instead of a branch cut (which is a continuum of singularities), we only get an isolated singularity. After summing over $L$, we find
+\begin{equation}
+	\widehat{\mathcal{A}}_{\Phi}(s, t, u) = - \frac{\beta_{0}}{\sqrt{2 \pi}} \frac{1}{M \sqrt{t}} \delta(P) \left[ \mathcal{A}_{-}(s, t, u) + \mathcal{A}_{+}(s, t, u) \right]
+\end{equation}
+where
+\begin{equation}
+	\mathcal{A}_{\mp} \equiv \pm \left[ - \frac{\beta_{0} \rho_{0}}{M} \right]^{R_{\mp}(t)} \left( \Gamma\left[ - R_{\mp}(t), - \frac{\beta_{0} \rho_{0}}{M} \right] - \Gamma\left[ - R_{\mp}(t) \right] \right) \label{AmpM}
+\end{equation}
+with
+\begin{equation}
+	R_{\mp}(t) \equiv -1 \mp \sqrt{\frac{t}{M^{2}}}
+\end{equation}
+The form of (\ref{AmpM}) is also curious: It is similar to a Regge amplitude, with Regge trajectory function $R_{\mp}(t)$. However, the singularities from $R_{\mp}(t_{J}) = J$ are not bound states!
+
+The features of the eikonal scattering amplitude in three dimensions are not expected in higher dimensions. The form of (\ref{ELOL3}) can be explained as follows. In the eikonal JWKB approximation, the eikonal Van Vleck function for the massive exchange is again proportional to a propagator in $D - 2$ dimensions. However, this lower-dimensional propagator is now massive. Thus, just like in the massless scalar case, considered in \S\ref{SecMasslessSca4}, the semiclassical eikonal kernel (\ref{EikonalFormMassive}) corresponds to a sum over multiple exchanges between two points. In $D = 3$, the eikonal Van Vleck function is proportional to a massive scalar propagator in one spacetime dimension. Recall that in one dimension, the propagator has the form\footnote{See appendix \ref{AppFreeSca} for details.}
+\begin{equation}
+	G_{M}(x) = - \frac{\sqrt{2 \pi} i}{M} \exp{\left[ - i \sqrt{- M^{2} x^{2}} \right]}
+\end{equation}
+The term with $L + 1$ exchanges between two points separated by $x$ is proportional to the product of $L+1$ propagators,
+\begin{equation}
+	[G_{M}(x)]^{(L+1)} = \left( - \frac{\sqrt{2 \pi} i}{M} \right)^{(L+1)} \exp{\left[ - i \sqrt{- (L+1)^{2}M^{2} x^{2}} \right]} \label{GML1}
+\end{equation}
+which in turn is proportional to a one-dimensional massive propagator with mass $(L+1)M$. Since the semiclassical propagator is exact in one dimension, the Fourier transform of (\ref{GML1}) is proportional to a massive scalar Feynman propagator with a pole at $(L+1)^{2} M^{2}$, which is exactly what we get in (\ref{ELOL3}).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Four Dimensions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The story is not very illuminating in $D = 4$. Just to be careful, we will work with $D = 4 - 2 \epsilon$ and $\epsilon > 0$. Note the minus sign in front of $\epsilon$. We have
+\begin{align}
+	Y_{0}(L) &= \frac{(L+1)(2 \epsilon - 1)}{4} \\
+	Z_{0}(L) &= \frac{(L+1)(1 - 2 \epsilon)}{4} \\
+	W_{0}(L) &= \frac{3 - L + 2 \epsilon (L - 1) }{4}
+\end{align}
+and
+\begin{align}
+	\tilde{Y}_{0}(L) &= \frac{2 + (L+1)(2 \epsilon - 1)}{4} \\
+	\tilde{Z}_{0}(L) &= \frac{L - 1 - 2 \epsilon (L+1)}{4} \\
+	\tilde{W}_{0}(L) &= \frac{5 - L + 2 \epsilon (L - 1)}{4}
+\end{align}
+At tree level (i.e. zero-loops), we have
+\begin{align}
+	\mathcal{E}_{0}(t) &= (1 - i) \left[ \frac{\Gamma\left( 3/4 \right)}{\Gamma\left( 1/4 \right)} \right] \left( \frac{M^{2}}{t} \right)^{3/4} {}_{2} F_{1} \left( \frac{3}{4}, \frac{3}{4}; \frac{1}{2}; \frac{M^{2}}{t} \right) \\
+	\mathcal{O}_{0}(t) &= -2(1 + i) \left[ \frac{\Gamma\left( 5/4 \right)}{\Gamma\left( -1/4 \right)} \right] \left( \frac{M^{2}}{t} \right)^{5/4} {}_{2} F_{1} \left( \frac{5}{4}, \frac{5}{4}; \frac{3}{2}; \frac{M^{2}}{t} \right)
+\end{align}
+where we have taken the $\epsilon \rightarrow 0$ limit. These expressions are much more complicated than a simple pole at $t = M^{2}$. Indeed, we have a cut at $t = 0$. Using the Euler identity (\ref{EulerId}), we can write
+\begin{align}
+	{}_{2} F_{1} \left( \frac{3}{4}, \frac{3}{4}; \frac{1}{2}; \frac{M^{2}}{t} \right) &= \left( \frac{t}{t - M^{2}} \right) {}_{2} F_{1} \left(-\frac{1}{4}, -\frac{1}{4}; \frac{1}{2}; \frac{M^{2}}{t} \right) \\
+	{}_{2} F_{1} \left( \frac{5}{4}, \frac{5}{4}; \frac{3}{2}; \frac{M^{2}}{t} \right) &= \left( \frac{t}{t - M^{2}} \right) {}_{2} F_{1} \left(\frac{1}{4}, \frac{1}{4}; \frac{3}{2}; \frac{M^{2}}{t} \right)
+\end{align}
+So then,
+\begin{equation}
+	\mathcal{M}_{0}(t) = -\left( \frac{2M^{2}}{M^{2} - t} \right) \mathcal{P}_{0}(t)
+\end{equation}
+with
+\begin{equation}
+\begin{split}
+	\mathcal{P}_{0}(t) \equiv {}& \left(\frac{1 - i}{2}\right) \left[ \frac{\Gamma\left( 3/4 \right)}{\Gamma\left( 1/4 \right)} \right] \left( \frac{M^{2}}{t} \right)^{-1/4} {}_{2} F_{1} \left( -\frac{1}{4}, -\frac{1}{4}; \frac{1}{2}; \frac{M^{2}}{t} \right) \\
+	& -(1 + i) \left[ \frac{\Gamma\left( 5/4 \right)}{\Gamma\left( -1/4 \right)} \right] \left( \frac{M^{2}}{t} \right)^{1/4} {}_{2} F_{1} \left( \frac{1}{4}, \frac{1}{4}; \frac{3}{2}; \frac{M^{2}}{t} \right)
+\end{split}
+\end{equation}
+Thus, the tree level amplitude is
+\begin{equation}
+	\widehat{\mathcal{A}}_{0}(t) = \mathcal{A}_{\text{tree}}(t) \mathcal{P}_{0}(t), \qquad \mathcal{A}_{\text{tree}}(t) \equiv \frac{2\alpha_{0}}{M^{2} - t} \delta(P)
+\end{equation}
+Note that $\mathcal{P}_{0}$ is finite when $t = M^{2}$.
+
+At one-loop level, we have
+\begin{equation}
+	\mathcal{O}_{1}(t) = 0, \qquad \mathcal{E}_{1}(t) = -i \left( \frac{M^{2}}{t - 4M^{2}} \right)^{1/2}
+\end{equation}
+where we have taken the $\epsilon \rightarrow 0$ limit. This exhibits a cut at $t = (2M)^{2}$.
+
+Similarly, after taking the $\epsilon \rightarrow 0$ limit, we find at two-loops level
+\begin{align}
+	\mathcal{E}_{2}(t) &= -2(1 + i) \left[ \frac{\Gamma(5/4)}{\Gamma(3/4)} \right] \left( \frac{M^{2}}{t} \right)^{1/4} {}_{2}F_{1}\left( \frac{1}{4}, \frac{1}{4}; \frac{1}{2}; \frac{9M^{2}}{t} \right)  \\
+	\mathcal{O}_{2}(t) &= -3(1 - i) \left[ \frac{\Gamma(3/4)}{\Gamma(1/4)} \right] \left( \frac{M^{2}}{t} \right)^{3/4} {}_{2}F_{1}\left( \frac{3}{4}, \frac{3}{4}; \frac{3}{2}; \frac{9M^{2}}{t} \right)
+\end{align}
+However, at three-loops level, we find after taking the $\epsilon \rightarrow 0$ limit
+\begin{equation}
+	\mathcal{O}_{3}(t) = i \arcsin{\left( \sqrt{\frac{16M^{2}}{t}} \right)}
+\end{equation}
+but $\mathcal{E}_{3}$ is divergent when $\epsilon = 0$. At four-loops level, we find no problems when $\epsilon = 0$, but at five-loops level we find
+\begin{equation}
+	\mathcal{E}_{5}(t) = -i \sqrt{\frac{t}{M^{2}}} \left[ \sqrt{1 - \frac{36 M^{2}}{t}} +  \sqrt{\frac{36 M^{2}}{t}} \arcsin{\left( \sqrt{\frac{36M^{2}}{t}} \right)} \right]
+\end{equation}
+but $\mathcal{O}_{5}$ is divergent when $\epsilon = 0$. Because of these divergences at odd number of loops, we cannot find a compact form for the scattering amplitude.

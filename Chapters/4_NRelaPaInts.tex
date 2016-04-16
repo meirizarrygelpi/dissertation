@@ -1,0 +1,385 @@
+\chapter{Nonrelativistic Path Integrals\label{ChNRPaths}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Before we discuss the relativistic theory, it will be fruitful to briefly venture into the nonrelativistic realm where we will find familiar results. The relativistic theory in later chapters is constructed in close analogy with the nonrelativistic topics discussed in this chapter.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quantum Kernels\label{NRQuaKer}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In nonrelativistic quantum mechanics we describe the state $\psi_{t}$ of a system under consideration at time $t$ as a vector\footnote{Also referred to as a ``state ket''.} $| \psi_{t} \rangle$ in a Hilbert space. This means that we are working in the Heisenberg picture, where state kets do not carry the explicit time dependence. One of the main objects of interest is the amplitude for a state $\psi_{I}$ at time $t = t_{I}$ (the ``in'' state) to transition to a state $\psi_{O}$ at a later time $t = t_{O} > t_{I}$ (the ``out'' state). This amplitude is given by
+\begin{equation}
+	A_{IO} = \frac{\langle \psi_{O} | \psi_{I} \rangle}{\sqrt{\langle \psi_{O}| \psi_{O} \rangle} \sqrt{\langle \psi_{I}| \psi_{I}\rangle}}
+\end{equation}
+The denominator is required in order for
+\begin{equation}
+	P_{IO} \equiv | A_{IO} |^{2}
+\end{equation}
+to have a probability interpretation with the correct normalization
+\begin{equation}
+	0 \leq P_{IO} \leq 1
+\end{equation}
+After properly normalizing the state kets we can set this denominator to unity.
+
+In practice we decompose a state vector into components along a convenient complete basis. The basis of choice is the position basis,
+\begin{equation}
+	| \psi_{t} \rangle = \int \mathrm{d}x \, \psi(\mathbf{x}, t) | \mathbf{x}, t \rangle, \qquad \psi(\mathbf{x}, t) \equiv \langle \mathbf{x}, t | \psi_{t} \rangle
+\end{equation}
+The position eigenkets are orthogonal
+\begin{equation}
+	\langle \mathbf{x}, t | \mathbf{y}, t \rangle = \delta(\mathbf{x} - \mathbf{y})
+\end{equation}
+and form a complete set,
+\begin{equation}
+	\int \mathrm{d}x \, | \mathbf{x}, t \rangle \langle \mathbf{x}, t | = 1
+\end{equation}
+Note that we have adopted the normalization conventions
+\begin{equation}
+	\delta(\mathbf{x}) \equiv \left( 2 \pi \right)^{d/2} \delta^{d}(\mathbf{x}), \qquad \int \mathrm{d}x \equiv \int \frac{\mathrm{d}^{d}x}{(2 \pi)^{d/2}}
+\end{equation}
+where $d$ is the number of spatial dimensions. Another useful basis is the momentum basis,
+\begin{equation}
+	| \psi_{t} \rangle = \int \mathrm{d}p \, \hat{\psi}(\mathbf{p}, t) | \mathbf{p}, t \rangle, \qquad \hat{\psi}(\mathbf{p}, t) \equiv \langle \mathbf{p}, t | \psi_{t} \rangle
+\end{equation}
+The momentum eigenkets are also orthogonal and form a complete set,
+\begin{equation}
+	\langle \mathbf{p}, t | \mathbf{q}, t \rangle = \delta(\mathbf{p} - \mathbf{q}), \qquad \int \mathrm{d}p \, | \mathbf{p}, t \rangle \langle \mathbf{p}, t | = 1
+\end{equation}
+However, the normalization involves $\hbar$:
+\begin{equation}
+	\delta(\mathbf{p}) \equiv \left( 2 \pi \hbar^{2} \right)^{d/2} \delta^{d}(\mathbf{p}), \qquad \int \mathrm{d}p \equiv \int \frac{\mathrm{d}^{d}p}{(2 \pi \hbar^{2})^{d/2}}
+\end{equation}
+Position and momentum are conjugate quantities. This means that we can switch between them via a Fourier transform:
+\begin{equation}
+	| \mathbf{p}, t \rangle = \int \mathrm{d}x \, \exp{\left( \frac{i}{\hbar} \mathbf{x} \cdot \mathbf{p} \right)} | \mathbf{x}, t \rangle
+\end{equation}
+Thus,
+\begin{equation}
+	\langle \mathbf{x}, t | \mathbf{p}, t \rangle = \exp{\left( \frac{i}{\hbar} \mathbf{x} \cdot \mathbf{p} \right)}, \qquad \langle \mathbf{p}, t | \mathbf{x}, t \rangle = \exp{\left(- \frac{i}{\hbar} \mathbf{x} \cdot \mathbf{p} \right)}
+\end{equation}
+Note that these relations hold when the eigenkets are at the same instant in time.
+
+After inserting a complete set of position eigenkets at time $t = t_{I}$ and $t = t_{O}$, we can write the inner product as
+\begin{equation}
+	\langle \psi_{O} | \psi_{I} \rangle = \int \int \mathrm{d}x_{I} \mathrm{d}x_{O} \, \psi_{O}^{*}(\mathbf{x}_{O}, t_{O}) \mathcal{F}(O|I) \psi_{I}(\mathbf{x}_{I}, t_{I})
+\end{equation}
+where we have introduced the position basis \textbf{quantum kernel} $\mathcal{F}$, defined as
+\begin{equation}
+	\mathcal{F}(O|I) \equiv \langle \mathbf{x}_{O} , t_{O} | \mathbf{x}_{I}, t_{I} \rangle
+\end{equation}
+Here $I$ and $O$ are labels that denote the set of ``in'' and ``out'' variables. One can equivalently insert a complete set of momentum eigenkets at time $t = t_{I}$ and $t = t_{O}$,
+\begin{equation}
+	\langle \psi_{O} | \psi_{I} \rangle = \int \int \mathrm{d}p_{I} \mathrm{d}p_{O} \, \hat{\psi}_{O}^{*}(\mathbf{p}_{O}, t_{O}) \widehat{\mathcal{F}}(O|I) \hat{\psi}_{I}(\mathbf{p}_{I}, t_{I})
+\end{equation}
+which leads to the momentum basis quantum kernel $\widehat{\mathcal{F}}$,
+\begin{equation}
+	\widehat{\mathcal{F}}(O|I) \equiv \langle \mathbf{p}_{O} , t_{O} | \mathbf{p}_{I}, t_{I} \rangle
+\end{equation}
+Due to the Fourier-Heisenberg conjugacy of the position and momentum bases, we have
+\begin{equation}
+	\widehat{\mathcal{F}}(O|I) = \int \int \mathrm{d} x_{I} \mathrm{d} x_{O}\mathcal{K}(O|I) \mathcal{F}(O|I) \label{FeynHatAsInt}
+\end{equation}
+with
+\begin{equation}
+	\mathcal{K}(O|I) = \exp{\left( \frac{i}{\hbar} \mathbf{x}_{I} \cdot \mathbf{p}_{I} -\frac{i}{\hbar} \mathbf{x}_{O} \cdot \mathbf{p}_{O} \right)}
+\end{equation}
+Note that $\mathcal{K}$ does not depend explicitly on $t_{I}$ or $t_{O}$.
+
+Besides the Heisenberg picture, we can also work in the Schr\"{o}dinger picture, where operators (and also their eigenvalues) carry no time dependence. In the position basis, the quantum kernel becomes
+\begin{equation}
+	\mathcal{F}(O|I) = \langle \mathbf{x}_{O} | U(t_{O}, t_{I}) | \mathbf{x}_{I} \rangle
+\end{equation}
+where $U$ is the time evolution operator. Similarly, in the momentum basis,
+\begin{equation}
+	\widehat{\mathcal{F}}(O|I) = \langle \mathbf{p}_{O} | U(t_{O}, t_{I}) | \mathbf{p}_{I} \rangle
+\end{equation}
+The Schr\"{o}dinger picture will facilitate the discussion of the S-matrix.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{S-Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{S-matrix} $\mathcal{S}$ can be defined in the momentum basis as
+\begin{equation}
+	\mathcal{S}(O|I) \equiv \langle \mathbf{p}_{O} | U_{0}^{\dagger}(t_{O}) U(t_{O}, t_{I}) U_{0}(t_{I}) | \mathbf{p}_{I} \rangle
+\end{equation}
+where $U_{0}$ is the \textit{free} time evolution operator. Using
+\begin{equation}
+	U_{0}(t) | \mathbf{p} \rangle = \exp{\left(- \frac{i t}{2 m \hbar} \mathbf{p}^{2} \right)} | \mathbf{p} \rangle, \qquad \langle \mathbf{p} | U_{0}^{\dagger}(t)  = \langle \mathbf{p} | \exp{\left( \frac{i t}{2 m \hbar} \mathbf{p}^{2} \right)}
+\end{equation}
+leads to
+\begin{equation}
+	\mathcal{S}(O|I) = \int \int \mathrm{d} x_{I} \mathrm{d} x_{O} \, \overline{\mathcal{U}}_{O}(O) \mathcal{U}_{I}(I) \mathcal{F}(O|I) \label{SMatrixF}
+\end{equation}
+which is analogous to (\ref{FeynHatAsInt}), except that instead of $\mathcal{K}$ we have
+\begin{align}
+	\mathcal{U}_{I}(I) &\equiv \langle \mathbf{x}_{I} | U_{0}(t_{I}) | \mathbf{p}_{I} \rangle =\exp{\left( \frac{i}{\hbar} \mathbf{x}_{I} \cdot \mathbf{p}_{I} - \frac{i t_{I}}{2 m \hbar} \mathbf{p}_{I}^{2} \right)} \\
+	\overline{\mathcal{U}}_{O}(O) &\equiv \langle \mathbf{p}_{O} | U_{0}^{\dagger}(t_{O}) | \mathbf{x}_{O} \rangle = \exp{\left( -\frac{i}{\hbar} \mathbf{x}_{O} \cdot \mathbf{p}_{O} + \frac{i t_{O}}{2 m \hbar} \mathbf{p}_{O}^{2} \right)}
+\end{align}
+These factors will be generalized accordingly when we consider the relativistic theory.
+
+In practice it is more appropriate to consider the \textbf{asymptotic S-matrix},
+\begin{equation}
+	\mathcal{A}(O|I) \equiv \left[ \lim_{T \rightarrow \infty} \right] \left[ \lim_{t_{O} \rightarrow +T/2} \right] \left[ \lim_{t_{I} \rightarrow -T/2} \right] \mathcal{S}(O|I) \label{AsympSMatrix}
+\end{equation}
+From right to left, the first two limits make the time interval symmetric with duration $T$ and centered at the origin. The third limit makes the time interval very long.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Semiclassical Kernels\label{NRSemiKer}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The quantum kernel $\mathcal{F}$ can be written as a functional integral,
+\begin{equation}
+	\mathcal{F}(O|I) = \int\limits_{\mathbf{x}_{I}}^{\mathbf{x}_{O}} \mathrm{D}\mathbf{q}(t) \exp{\left( - \frac{i}{\hbar} S[\mathbf{q}] \right)} \label{FeynPath}
+\end{equation}
+where the functional integration is over all path configurations $\mathbf{q}(t)$ with boundary conditions
+\begin{equation}
+	\mathbf{q}(t_{I}) = \mathbf{x}_{I} \text{ and } \mathbf{q}(t_{O}) = \mathbf{x}_{O}
+\end{equation}
+This form of the quantum kernel is known as the Feynman path integral. From now on, we will work almost exclusively with the path integral formulation of the kernel.
+
+The meaning of the quantum kernel can be extracted from the formulation in (\ref{FeynPath}). The path integral corresponds to summing over \textit{all} possible paths with appropriate boundary conditions. Each path $\mathbf{q}(t)$ contributes a factor of the form
+\begin{equation}
+	\exp{\left( - \frac{i}{\hbar} S[ \mathbf{q} ] \right)}
+\end{equation}
+where $S$ is the action functional, familiar from classical mechanics. The motion of classical objects is specified by the classical path configuration $\bar{\mathbf{q}}(t)$. This path makes the action functional $S$ stationary. Looking at (\ref{FeynPath}), one can see that in the $\hbar \rightarrow 0$ limit, the path integral is dominated by the path that makes the action stationary, the classical path. But $\hbar$ is a fixed (dimensionful) constant in Nature, so $\hbar \rightarrow 0$ means that quantities with units of $\hbar$ are very large compared to $\hbar$. One quantity with units of $\hbar$ is angular momentum, and since angular momentum is quantized in the quantum theory, the $\hbar \rightarrow 0$ limit corresponds to the regime of \textit{large quantum numbers}. More details about the regime when a classical path is dominant will be discussed later when we work with the relativistic theory (see \S\ref{SecDimAn}).
+
+The $\hbar \rightarrow 0$ limit is also known as the \textit{semiclassical approximation} or the \textit{JWKB approximation}. In the wavefunction formulation of quantum mechanics, the semiclassical approximation is valid when the de Broglie wavelength
+\begin{equation}
+	\lambda_{dB} = \frac{2 \pi \hbar}{|\mathbf{p}|}
+\end{equation}
+is small compared to the distance over the which the interaction potential varies. Classically, we have
+\begin{equation}
+	|\mathbf{p}| = \sqrt{2 m [E - V(\mathbf{x})]}
+\end{equation}
+Thus, small $\lambda_{dB}$ leads to large $|\mathbf{p}|$, which in turn leads to the condition $E \gg |V(\mathbf{x})|$. In this sense, the nonrelativistic semiclassical approximation is a \textit{large-energy approximation}. This is a kinematical consequence of the semiclassical approximation. As we will see later, the semiclassical approximation has dynamical consequences that sometimes lead to strong-coupling.
+
+In the semiclassical approximation, the quantum kernel becomes the \textbf{semiclassical kernel} $\mathcal{V}$, which takes the form
+\begin{equation}
+	\mathcal{V}(O|I) = \sqrt{\det{(\mathbf{V})}} \exp{\left(- \frac{i}{\hbar} \Sigma \right)} \label{SemiClass}
+\end{equation}
+where the \textbf{Van Vleck function} $\Sigma$ is the value of the action functional at the classical path $\bar{\mathbf{q}}(t)$,
+\begin{equation}
+	\Sigma \equiv S [ \bar{\mathbf{q}} ]
+\end{equation}
+and the \textbf{Van Vleck matrix} $\mathbf{V}$ is given by
+\begin{equation}
+	\mathbf{V} \equiv - \frac{i}{\hbar} \frac{\partial^{2} \Sigma}{\partial \mathbf{x}_{I} \partial \mathbf{x}_{O}}
+\end{equation}
+The classical path $\bar{\mathbf{q}}(t)$ is a function of the boundary values $\mathbf{x}_{I}$ and $\mathbf{x}_{O}$. Thus, $\Sigma$ and $\mathbf{V}$ are also functions of the boundary values. In order to compute the semiclassical kernel, we must know the classical path.
+
+At first glance, the form of (\ref{SemiClass}) might seem odd. In the $\hbar \rightarrow 0$ limit we use the functional analog of the stationary phase approximation to perform the functional integration over $\mathbf{q}(t)$. Thus, we expect something of the form
+\begin{equation}
+	\frac{1}{\sqrt{\det{(\mathbf{M})}}} \exp{\left( - \frac{i}{\hbar} \Sigma \right)}, \qquad \mathbf{M} \equiv \frac{i}{\hbar} \frac{\delta^{2} S }{\delta \mathbf{q}(t) \delta \mathbf{q}(s)}
+\end{equation}
+with the determinant\footnote{Note that the determinant here is a \textit{functional} determinant, unlike in (\ref{SemiClass}) where we have a \textit{traditional} determinant.} appearing with a different power than in (\ref{SemiClass}). However, (\ref{SemiClass}) is correct, and it can be derived in many ways.
+
+The simplest way to derive (\ref{SemiClass}) involves using the fact that in the Schr\"{o}dinger picture, time evolution acts as a unitary transformation on states,
+\begin{equation}
+	| \psi_{O} \rangle = U(t_{O}, t_{I}) | \psi_{I} \rangle
+\end{equation}
+Thus,
+\begin{equation}
+	\psi_{O}(\mathbf{x}_{O}, t_{O}) = \int \mathrm{d} \mathbf{x}_{I} \, \mathcal{F}(O|I) \psi_{I}(\mathbf{x}_{I}, t_{I})
+\end{equation}
+This means that the spatial and temporal dependence of $\psi_{O}$ is governed by the quantum kernel $\mathcal{F}$. So, if $\psi_{O}$ satisfies the Schr\"{o}dinger equation, then so does the quantum kernel. Recall the ``out'' Schr\"{o}dinger equation,
+\begin{equation}
+	H_{O} \mathcal{F} = i \hbar \frac{\partial \mathcal{F}}{\partial t_{O}}
+\end{equation}
+where $H_{O}$ is the ``out'' quantum Hamiltonian operator. We will assume that $H_{O}$ is a generic function of the ``out'' position and ``out'' momentum operators, and also is time-dependent,
+\begin{equation}
+	H_{O}(\mathbf{Q}_{O}, \mathbf{P}_{O}, t_{O})
+\end{equation}
+When $\hbar \approx 0$ we Taylor-expand $H_{O}$ around the classical values. That is, we expand in powers of
+\begin{equation}
+	\left[ \langle \mathbf{i}| \mathbf{Q}_{O} | \mathbf{j} \rangle - \mathbf{x}_{O} \langle \mathbf{i}| \mathbf{j} \rangle  \right] \quad \text{and} \quad \left[ \langle \mathbf{i}| \mathbf{P}_{O} | \mathbf{j} \rangle - \mathbf{p}_{O} \langle \mathbf{i}| \mathbf{j} \rangle  \right]
+\end{equation}
+where $\mathbf{x}_{O}$ and $\mathbf{p}_{O}$ are commuting numbers (i.e. not operators). Here $\langle \mathbf{i} |$ and $| \mathbf{j} \rangle$ belong to an arbitrary complete basis that we have used to write the matrix elements of the operators $\mathbf{Q}_{O}$ and $\mathbf{P}_{O}$. In order to avoid any ordering issues we work with a symmetric expansion,
+\begin{equation}
+	H_{O} = H_{0} + H_{1} + \ldots
+\end{equation}
+where
+\begin{equation}
+	H_{0} = H_{O}(\mathbf{x}_{O}, \mathbf{p}_{O}, t_{O}) \qquad H_{1} = H_{Q} + H_{P}
+\end{equation}
+with
+\begin{align}
+	H_{Q} &= \frac{1}{2} \left[ (\mathbf{Q}_{O} - \mathbf{x}_{O}) \cdot \frac{\partial H_{0}}{\partial \mathbf{x}_{O}} + \frac{\partial H_{0}}{\partial \mathbf{x}_{O}} \cdot (\mathbf{Q}_{O} - \mathbf{x}_{O}) \right] \\
+	H_{P} &= \frac{1}{2} \left[ (\mathbf{P}_{O} - \mathbf{p}_{O}) \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} + \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \cdot (\mathbf{P}_{O} - \mathbf{p}_{O}) \right]
+\end{align}
+We \textit{define} the semiclassical kernel $\mathcal{V}$ by the equation
+\begin{equation}
+	\left( H_{O} + H_{Q} + H_{P} \right) \mathcal{V} = i \hbar \frac{\partial \mathcal{V}}{\partial t_{O}} \label{SemiSchr}
+\end{equation}
+This amounts to keeping only $H_{0}$ and $H_{1}$ in the expansion of the ``out'' quantum Hamiltonian $H_{O}$.
+
+Although we have used an arbitrary complete basis to expand the matrix elements of our operators, in practice we work with the \textbf{coordinate basis}:
+\begin{equation}
+	\mathbf{Q}_{O} \rightarrow \mathbf{q}_{O}, \qquad \mathbf{P}_{O} \rightarrow - i \hbar \frac{\partial}{\partial \mathbf{q}_{O}}
+\end{equation}
+Then it follows that
+\begin{equation}
+	H_{Q} \mathcal{V} = 0
+\end{equation}
+Furthermore,
+%\begin{equation}
+%	\left[ (\mathbf{P}_{O} - \mathbf{p}_{O}) \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \right] \mathcal{V} = - i \hbar \frac{\partial}{\partial \mathbf{x}_{O}} \cdot \left( \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \right) \mathcal{V} - i \hbar \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \cdot \frac{\partial \mathcal{V}}{\partial \mathbf{x}_{O}} - \mathbf{p}_{O} \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \mathcal{V}
+%\end{equation}
+%and
+%\begin{equation}
+%	\left[ \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \cdot (\mathbf{P}_{O} - \mathbf{p}_{O}) \right] \mathcal{V} = - i \hbar \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \cdot \frac{\partial \mathcal{V}}{\partial \mathbf{x}_{O}} - \mathbf{p}_{O} \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \mathcal{V}
+%\end{equation}
+%Thus,
+\begin{equation}
+	H_{P} \mathcal{V} = - i \hbar \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \cdot \frac{\partial \mathcal{V}}{\partial \mathbf{x}_{O}} - \mathbf{p}_{O} \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \mathcal{V} - \frac{i \hbar}{2} \frac{\partial}{\partial \mathbf{x}_{O}} \cdot \left( \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \right) \mathcal{V}
+\end{equation}
+We start with the ansatz
+\begin{equation}
+	\mathcal{V} = \sqrt{\rho} \exp{\left(- \frac{i}{\hbar} \Sigma \right)}
+\end{equation}
+Taking a time derivative yields
+\begin{equation}
+	i \hbar \frac{\partial \mathcal{V}}{\partial t_{O}} = \left[ i \hbar \frac{1}{2 \rho} \frac{\partial \rho}{\partial t_{O}} + \frac{\partial \Sigma}{\partial t_{O}} \right] \mathcal{V}
+\end{equation}
+Similarly, taking a spatial derivative yields
+\begin{equation}
+	{-i \hbar} \frac{\partial \mathcal{V}}{\partial \mathbf{x}_{O}} = \left[ -i \hbar \frac{1}{2 \rho} \frac{\partial \rho}{\partial \mathbf{x}_{O}} - \frac{\partial \Sigma}{\partial \mathbf{x}_{O}} \right] \mathcal{V}
+\end{equation}
+So then, (\ref{SemiSchr}) becomes
+\begin{equation}
+\begin{split}
+	{}& \left[ H_{0} - \left( \mathbf{p}_{O} + \frac{\partial \Sigma}{\partial \mathbf{x}_{O}} \right) \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} - \frac{\partial \Sigma}{\partial t_{0}} \right] \mathcal{V} \\
+	{}& {- \frac{i \hbar}{2 \rho} } \left[ \rho \frac{\partial}{\partial \mathbf{x}_{O}} \cdot \left( \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \right) + \frac{\partial \rho}{\partial \mathbf{x}_{O}} \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} + \frac{\partial \rho}{\partial t_{O}} \right] \mathcal{V} = 0
+\end{split}
+\end{equation}
+Note that the first line is of order-zero in $\hbar$ and the second line is of order-one in $\hbar$. We will solve this equation by setting each term equal to zero. Thus, we find two equations which can be used to solve for $\rho$ and $\Sigma$:
+\begin{align}
+	H_{0} - \left( \mathbf{p}_{O} + \frac{\partial \Sigma}{\partial \mathbf{x}_{O}} \right) \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} - \frac{\partial \Sigma}{\partial t_{0}} = 0 \label{HJ0} \\
+	\rho \frac{\partial}{\partial \mathbf{x}_{O}} \cdot \left( \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \right) + \frac{\partial \rho}{\partial \mathbf{x}_{O}} \cdot \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} + \frac{\partial \rho}{\partial t_{O}} = 0 \label{HJ1}
+\end{align}
+Equation (\ref{HJ1}) can be written in the form of a continuity equation,
+\begin{equation}
+	\frac{\partial \rho}{\partial t_{O}} + \frac{\partial}{\partial \mathbf{x}_{O}} \cdot \left( \rho \frac{\partial H_{0}}{\partial \mathbf{p}_{O}} \right) = 0 \label{conti}
+\end{equation}
+Instead of (\ref{HJ0}), we will consider a more \textit{restrictive} case,
+\begin{equation}
+	\mathbf{p}_{O} = - \frac{\partial \Sigma}{\partial \mathbf{x}_{O}}
+\end{equation}
+Combining this with (\ref{HJ0}) leads to a set of equations that have the same form as the Hamilton-Jacobi equations,
+\begin{equation}
+	H_{0} = \frac{\partial \Sigma}{\partial t_{0}}, \qquad \mathbf{p}_{O} = - \frac{\partial \Sigma}{\partial \mathbf{x}_{O}}
+\end{equation}
+where $H_{0}$ plays the role of the classical Hamiltonian, and $\Sigma$ plays the role of the classical Hamilton function, which is related to the value of the action functional at the classical path.
+
+Before we move forward, we must address an apparent inconsistency. The classical Hamiltonian $H_{0}$ is a function of the ``out'' position $\mathbf{x}_{O}$ and the ``out'' momentum $\mathbf{p}_{O}$. But we expect $\mathcal{V}$ to be a function of the ``out'' position and the ``in'' position $\mathbf{x}_{I}$. So we should make a change of variables
+\begin{equation}
+	\mathbf{p}_{O} \longrightarrow \mathbf{x}_{I}
+\end{equation}
+This change of variable leads to a Jacobian matrix
+\begin{equation}
+	\mathbf{J} \equiv \frac{\partial \mathbf{p}_{O}}{\partial \mathbf{x}_{I}} = - \frac{\partial^{2} \Sigma }{\partial \mathbf{x}_{I} \partial \mathbf{x}_{O}}
+\end{equation}
+So then
+\begin{equation}
+	\frac{\partial H_{0}}{\partial \mathbf{p}_{O}} = \mathbf{J}^{-1} \cdot \frac{\partial^{2} \Sigma}{\partial \mathbf{x}_{I} \partial t_{O} }
+\end{equation}
+and the continuity equation (\ref{conti}) becomes
+\begin{equation}
+	\frac{\partial \rho}{\partial t_{O}} + \frac{\partial}{\partial \mathbf{x}_{O}} \cdot \left( \rho \mathbf{J}^{-1} \cdot \frac{\partial^{2} \Sigma}{\partial \mathbf{x}_{I} \partial t_{O} } \right) = 0
+\end{equation}
+Expanding the second term yields
+\begin{equation}
+	\frac{\partial \rho}{\partial t_{O}} - \rho \operatorname{tr}{\left( \mathbf{J}^{-1} \cdot \frac{\partial \mathbf{J}}{\partial t_{O}} \right)} = - \left( \frac{\partial \rho}{\partial \mathbf{x}_{O}} \cdot \mathbf{J}^{-1} + \rho \frac{\partial}{\partial \mathbf{x}_{O}} \cdot \mathbf{J}^{-1} \right) \cdot \frac{\partial^{2} \Sigma}{\partial \mathbf{x}_{I} \partial t_{O} } \label{HJ2}
+\end{equation}
+Now recall some properties of the determinant and the inverse of a matrix. Consider an $n \times n$ matrix $\mathbf{M}$ that is a function of an $n$-dimensional vector parameter $\mathbf{x}$ and a scalar parameter $t$. We denote the inverse of $\mathbf{M}$ by $\mathbf{W}$. The determinant of $\mathbf{M}$ satisfies
+\begin{equation}
+	\frac{\partial}{\partial t} [ \det{(\mathbf{M})} ] = \det{(\mathbf{M})} \left[ W_{i}{}^{j} \frac{\partial M_{j}{}^{i}}{\partial t} \right] \label{dtDet}
+\end{equation}
+and
+\begin{equation}
+	\frac{\partial}{\partial x_{k}} [ \det{(\mathbf{M})} ] = \det{(\mathbf{M})} \left[ W_{i}{}^{j} \frac{\partial M_{j}{}^{i}}{\partial x_{k}} \right] \label{dxDet}
+\end{equation}
+The inverse of $\mathbf{M}$ satisfies
+\begin{equation}
+	\frac{\partial W_{i}{}^{j}}{\partial x_{k}} = - W_{i}{}^{m} \frac{\partial M_{m}{}^{n}}{\partial x_{k}} W_{n}{}^{j}
+\end{equation}
+Consider the case when $\mathbf{M}$ has the ``Jacobian'' form
+\begin{equation}
+	M_{i}{}^{j} = \frac{\partial y_{i}}{\partial x_{j}} \label{JacobianForm}
+\end{equation}
+Then
+\begin{equation}
+	T_{i}{}^{jk} \equiv \frac{\partial M_{i}{}^{j}}{\partial x_{k}} = \frac{\partial^{2} y_{i}}{\partial x_{j} \partial x_{k}}
+\end{equation}
+is symmetric in the upper indices. One can check that when $\mathbf{M}$ has the form (\ref{JacobianForm}) then
+\begin{equation}
+	\frac{\partial}{\partial x_{k}} [ \det{(\mathbf{M})} ] W_{k}{}^{l} + [ \det{(\mathbf{M})} ] \frac{\partial W_{k}{}^{l}}{\partial x_{k}} = 0 \label{JacobianResult}
+\end{equation}
+because of the symmetry of $T_{i}{}^{jk}$. One can use these identities to check that
+\begin{equation}
+	\rho = \det{(k \mathbf{J})}
+\end{equation}
+with $k$ a constant satisfies (\ref{HJ2}): The left side of (\ref{HJ2}) vanishes due to (\ref{dtDet}) and the pre-factor on the right side vanishes due to (\ref{JacobianResult}). Hence, we have found that the semiclassical kernel is
+\begin{equation}
+	\mathcal{V}(O|I) = \sqrt{\det{(\mathbf{V})}} \exp{\left(- \frac{i}{\hbar} \Sigma \right)}, \qquad \mathbf{V} \equiv k \mathbf{J} = - k \frac{\partial^{2} \Sigma }{\partial \mathbf{x}_{I} \partial \mathbf{x}_{O}}
+\end{equation}
+The constant $k$ is fixed after appropriate normalization. One finds $k = i / \hbar$.
+
+The derivation of the semiclassical kernel presented here is based on exercise VA2.1 from \cite{Fields}. A more rigorous derivation, using functional methods, can be found in \cite{CartierMorette} and references therein. Indeed, the semiclassical kernel is also known as the Van Vleck-Morette kernel, after C. DeWitt-Morette, who developed a very rigorous approach to the semiclassical limit of the Feynman path integral. The semiclassical (JWKB) approximation in quantum mechanics was developed separately by Jeffreys \cite{Jeffreys}, Wentzel \cite{Wentzel}, Kramers \cite{Kramers} and Brillouin \cite{Brillouin}. The role of classical Hamilton-Jacobi theory was pointed out by Van Vleck \cite{VanVleck}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Semiclassical S-Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In equation (\ref{SMatrixF}) we wrote the S-matrix in terms of the quantum kernel. After using the semiclassical approximation, the quantum kernel $\mathcal{F}$ becomes the semiclassical kernel $\mathcal{V}$. So in the semiclassical approximation, we define the \textbf{semiclassical S-matrix} as
+\begin{equation}
+	\mathcal{S}(O|I) \approx \int \int \mathrm{d} x_{I} \mathrm{d} x_{O} \, \overline{\mathcal{U}}_{O}(O) \mathcal{U}_{I}(I) \mathcal{V}(O|I) \label{SemiSMatrix}
+\end{equation}
+which is analogous to (\ref{SMatrixF}). In the same way, one can also define the \textbf{semiclassical asymptotic S-matrix}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Semiclassical Eikonal Kernels}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In order to find the semiclassical kernel $\mathcal{V}$ we must first solve the classical equations of motions and find the classical path $\bar{\mathbf{q}}(t)$. For most interacting systems the classical path is either very complicated or elusive, so the semiclassical approximation appears to have a limited scope. We follow a different approach: We adopt a path $\mathbf{f}(t)$ as the \textit{de facto} classical path and compute the semiclassical kernel with $\mathbf{f}(t)$ instead of $\bar{\mathbf{q}}(t)$. This approach is valid as long as the path $\mathbf{f}(t)$ approximates the classical path in some particular regime.
+
+The simplest path between two points $\mathbf{x}_{I}$ and $\mathbf{x}_{O}$ is the \textbf{eikonal path},
+\begin{equation}
+	\mathbf{e}(t) = \frac{\mathbf{x}_{I} + \mathbf{x}_{O}}{2} + \left( \mathbf{x}_{O} - \mathbf{x}_{I} \right) \left( \frac{t}{\Delta t} \right), \qquad 
+\end{equation}
+where the range of the time parameter $t$ is
+\begin{equation}
+	{- \frac{\Delta t}{2} } < t < \frac{\Delta t}{2}, \qquad \Delta t = t_{O} - t_{I} > 0
+\end{equation}
+The eikonal\footnote{The word ``eikonal'' here is meant as an adjective. Eikonal comes from the Greek word for image. In this work it is meant as a reference to Geometric Optics, where one works with light rays that move along straight paths. We will comment on other uses of the word ``eikonal'' later.} path describes a spatial trajectory where the motion has \textit{fixed direction} and \textit{fixed speed}:
+\begin{equation}
+	\dot{\mathbf{e}}(t) = \frac{\mathbf{x}_{O} - \mathbf{x}_{I}}{\Delta t}
+\end{equation}
+In many-body systems, if the path of each body is approximated by an eikonal path, then $\mathcal{E}$ is a good approximation in the regime of \textbf{small momentum transfer} or, equivalently, \textbf{small-angle scattering}. By Fourier-Heisenberg conjugacy, the small momentum transfer regime is the same as the regime where the separation between each body is kept very large. Since in the nonrelativistic semiclassical approximation each body has an energy that is much greater than the interaction energy, the \textit{nonrelativistic eikonal JWKB approximation} corresponds to \textit{large-energies} and \textit{small momentum transfer}. This approximation is discussed in the lectures by Glauber \cite{Glauber}.
+
+We define the \textbf{semiclassical eikonal kernel} $\mathcal{E}$ as
+\begin{equation}
+	\mathcal{E}(O|I) \equiv \sqrt{\det{(\mathbf{V}_{\text{eik}})}} \exp{\left(- \frac{i}{\hbar} \Sigma_{\text{eik}} \right)} \label{SemiClassEik}
+\end{equation}
+where the \textbf{eikonal Van Vleck function} $\Sigma_{\text{eik}}$ is
+\begin{equation}
+	\Sigma_{\text{eik}} \equiv S[ \mathbf{e} ]
+\end{equation}
+and the \textbf{eikonal Van Vleck matrix} $\mathbf{V}_{\text{eik}}$ is
+\begin{equation}
+	\mathbf{V}_{\text{eik}} \equiv - \frac{i}{\hbar} \frac{\partial \Sigma_{\text{eik}}}{\partial \mathbf{x}_{I} \partial \mathbf{x}_{O}}
+\end{equation}
+The definition of $\mathcal{E}$ is analogous to (\ref{SemiClass}), but with the eikonal path instead of the true classical path.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Semiclassical Eikonal S-Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+After introducing the semiclassical eikonal kernel $\mathcal{E}$, we can also introduce the corresponding S-matrix, the \textbf{semiclassical eikonal S-matrix}:
+\begin{equation}
+	\mathcal{S}(O|I) \approx \int \int \mathrm{d} x_{I} \mathrm{d} x_{O} \, \overline{\mathcal{U}}_{O}(O) \mathcal{U}_{I}(I) \mathcal{E}(O|I)
+\end{equation}
+Similarly, by analogy with (\ref{AsympSMatrix}), we introduce the \textbf{asymptotic semiclassical eikonal S-matrix}. Indeed, this is the \textit{only} version of the S-matrix that we will use through this work.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Many-body Systems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The simplest way to generalize all the results that we have collected so far for single-body systems is to work with the quantum kernel as a path integral. For example, the two-body quantum kernel $\mathcal{F}_{2}$ can be written as a double path integral:
+\begin{equation}
+	\mathcal{F}_{2}(3,4|1,2) = \int\limits_{\mathbf{x}_{1}}^{\mathbf{x}_{3}} \mathrm{D}\mathbf{q}_{a}(t) \int\limits_{\mathbf{x}_{2}}^{\mathbf{x}_{4}} \mathrm{D}\mathbf{q}_{b}(t) \, \exp{\left( - \frac{i}{\hbar} S[ \mathbf{q}_{a}, \mathbf{q}_{b} ] \right)}
+\end{equation}
+where $\mathbf{q}_{a}(t)$ and $\mathbf{q}_{b}(t)$ are the paths for bodies $a$ and $b$, respectively. Note that in the nonrelativistic theory there is a universal time parameter $t$, and thus both ``in'' boundary conditions are defined at time $t = t_{I}$:
+\begin{equation}
+	\mathbf{q}_{a}(t_{I}) = \mathbf{x}_{1} \text{ and } \mathbf{q}_{b}(t_{I}) = \mathbf{x}_{2}
+\end{equation}
+and similarly for both of the ``out'' boundary conditions, which are defined at time $t = t_{O}$:
+\begin{equation}
+	\mathbf{q}_{a}(t_{O}) = \mathbf{x}_{3} \text{ and } \mathbf{q}_{b}(t_{O}) = \mathbf{x}_{4}
+\end{equation}
+This feature will change in the relativistic theory.

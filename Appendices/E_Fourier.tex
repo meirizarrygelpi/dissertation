@@ -1,0 +1,39 @@
+\chapter{Fourier Transforms\label{AppFourier}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given a function $f(x)$ in the position basis, we can find a corresponding function $\hat{f}(p)$ in the momentum basis by performing a Fourier transform:
+\begin{equation}
+	\hat{f}(p) = \int \mathrm{d}x \, f(x) \exp{\left( - i x \cdot p \right)}
+\end{equation}
+We work with units where $\hbar = 1$.
+
+The simplest (and most useful) example is a Gaussian function,
+\begin{equation}
+	\mathbb{G}(x|a) = \exp{\left( \frac{i}{2a} \mu^{2} x^{2} \right)}, \qquad a > 0
+\end{equation}
+Here $a$ is dimensionless and $\mu$ is a constant with units of mass. The Fourier transform becomes the integral of a Gaussian,
+\begin{equation}
+	\hat{\mathbb{G}}(p|a) = \int \mathrm{d}x \, \exp{\left(\frac{i}{2a} \mu^{2} x^{2} - i x \cdot p \right)}
+\end{equation}
+This integral can be evaluated \textit{exactly} with stationary methods. The stationary point is
+\begin{equation}
+	x_{*} = \left( \frac{a}{\mu^{2}} \right) p
+\end{equation}
+After integration, we find
+\begin{equation}
+	\hat{\mathbb{G}}(p|a) = \left( \frac{i}{\mu^{2}} \right)^{D/2} \left( \frac{1}{a} \right)^{D/2} \exp{\left( - \frac{i a}{2} \frac{p^{2}}{\mu^{2}} \right)}, \qquad a > 0
+\end{equation}
+which is a Gaussian function in the momentum basis.
+
+Another simple example is an almost arbitrary power of $x^{2}$,
+\begin{equation}
+	\mathbb{P}(x|z) = \left( \frac{2}{\mu^{2} x^{2}} \right)^{z}, \qquad z \neq 0, {-1}, {-2}, \ldots
+\end{equation}
+Using the Euler Gamma function, we can write
+\begin{equation}
+	\left(\frac{2}{\mu^{2} x^{2}} \right)^{z} = \frac{1}{\Gamma(z)} \int\limits_{0}^{\infty} \mathrm{d}\omega \left( \frac{1}{\omega} \right)^{1 + z} \exp{\left(- \frac{1}{2\omega} \mu^{2} x^{2} \right)}
+\end{equation}
+This allows us to write $\mathbb{P}$ in terms of a Gaussian. Using the previous result for the Fourier transform of a Gaussian gives
+\begin{align}
+	\hat{\mathbb{P}}(p|z) &= \left( \frac{1}{\mu^{2}} \right)^{D/2} \frac{1}{\Gamma(z)} \int\limits_{0}^{\infty} \mathrm{d}\omega \left( \frac{1}{\omega} \right)^{1 - w} \exp{\left( - \frac{\omega}{2} \frac{p^{2}}{\mu^{2}} \right)} \nonumber \\
+	&= \left( \frac{1}{\mu^{2}} \right)^{D/2} \frac{\Gamma(w)}{\Gamma(z)} \left( \frac{2 \mu^{2}}{p^{2}} \right)^{w}, \quad w \equiv \frac{D}{2} - z
+\end{align}

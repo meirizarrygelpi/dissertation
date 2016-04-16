@@ -1,0 +1,68 @@
+\chapter{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+One of the main goals in physics is to understand the interactions between physical objects. Before the 20th century, all theories in physics involve classical objects. The motion of any classical object is, in principle, determined by the solution of its classical equation of motion. The solution of this problem yields a deterministic description of the motion: given initial information about the position and velocity of the object, in principle, its later position and velocity can be predicted with complete certainty\footnote{Of course, as long as chaotic dynamics are not involved.}.
+
+But the set of physical objects was drastically enlarged at the beginning of the 20th century with the discovery of quantum theory. It was quickly realized that the atomic and subatomic ``quantum objects'' could not be described with the classical, deterministic theories developed earlier. A new description, based on a probabilistic interpretation, emerged after the work of Bohr, Schr\"{o}dinger, Heisenberg, Dirac, and many others. Later, Dirac and Feynman developed a formulation of quantum theory that is based on functional integration. In this approach, the probability amplitude for a particle to travel from a point with position $\mathbf{x}_{I}$ to a point with position $\mathbf{x}_{O}$ involves computing a certain phase factor for a given path $\mathbf{q}(t)$ that connects the two points, and then adding the contributions from all possible paths. This so-called ``path integral'' formulation is intuitive since it ``builds up'' the quantum problem with classical ingredients (like paths in space).
+
+The quantum analog of scattering phenomena offers an important link between theory and experiment. Both the experimental and the theoretical study of scattering are quite challenging tasks. In this dissertation we will only follow the theoretical route\footnote{There are many exciting experiments currently taking place. A big thanks to all experimentalists, for performing such an excellent job.}.
+
+In a theoretical scattering event, an \textit{incoming} set of quanta is made to interact and produce an \textit{outgoing} set of quanta. The incoming set starts out isolated, and, after waiting a very long time, the outgoing set also becomes isolated. These two sets of external quanta are, in principle, different. That is, we can have an event like
+\begin{equation}
+	a(p_{1}) + b(p_{2}) \longrightarrow c(p_{3}) + d(p_{4})
+\end{equation}
+where an $a$ quantum\footnote{By an $x$ quantum, we mean a unit of matter of type $x$. Quantum matter has particle-like and wave-like behavior.} with momentum $p_{1}$, and a $b$ quantum with momentum $p_{2}$ interact and scatter into a $c$ quantum with momentum $p_{3}$, and a $d$ quantum with momentum $p_{4}$. We can have any number of incoming quanta, and any number of outgoing quanta.
+
+Bound state phenomena are complementary to scattering phenomena. One might think (incorrectly) that the physics of bound states has nothing to do with the physics of scattering. Bound states can form outside of the region of values that momenta can take in a scattering experiment. A bound state certainly does not satisfy the definition of a scattering event: the incoming or outgoing quanta are certainly not isolated! But, starting with the work of Regge \cite{Regge:1959mz,Regge:1960zc}, it was realized that under the right conditions, one could study both scattering phenomena \textit{and} bound state phenomena with the same framework.
+
+The scattering of quantum matter provides a theoretical arena where many physicists (and some mathematicians) have done battle with the difficulties inherent of the quantum theory. In order to make progress, like in most problems, approximations have to be made. For example, in Regge theory (see \S\ref{ReggeSca}), one keeps the momentum transfer fixed while taking the center-of-momentum energy to be very large in the crossed channel. In this dissertation we will use a different set of approximations.
+
+We consider \textit{four-point elastic} scattering, where we have \textit{two incoming} quanta, and \textit{two outgoing} quanta of the same kind as the incoming quanta. That is, we only consider scattering events of the form
+\begin{equation}
+	a(p_{1}) + b(p_{2}) \longrightarrow a(p_{3}) + b(p_{4}) \label{elastic}
+\end{equation}
+This type of scattering events have another interpretation: the propagation of a \textit{bound state},
+\begin{equation}
+	ab \longrightarrow ab
+\end{equation}
+We use a relativistic, two-body quantum-mechanical path integral $\mathcal{F}$ to describe the elastic event (\ref{elastic}):
+\begin{equation}
+	\mathcal{F}(3,4|1,2) = \int\limits_{x_{1}}^{x_{3}} \mathrm{D}q_{a}(\tau) \int\limits_{x_{2}}^{x_{4}} \mathrm{D}q_{b}(\sigma) \exp{\left( - i S[q_{a}, q_{b}] \right)}
+\end{equation}
+That is, the $a$ and $b$ quanta behave like \textit{particles}. Quantum theory requires us to consider \textit{all} possible spacetime paths $q_{a}(\tau)$ that connect the $a$ quantum at position $x_{1}$ to the $a$ quantum at position $x_{3}$, and also \textit{all} possible spacetime paths $q_{b}(\sigma)$ that connect the $b$ quantum at position $x_{2}$ to the $b$ quantum at position $x_{4}$.
+
+The first approximation that we use is the \textit{semiclassical approximation}, where we extract from $\mathcal{F}$ the contribution from the pair of classical paths $\bar{q}_{a}(\tau)$ and $\bar{q}_{b}(\sigma)$:
+\begin{equation}
+	\mathcal{F}(3,4|1,2) \quad \xrightarrow[\text{approximation}]{\text{semiclassical}} \quad \mathcal{V}(3,4|1,2) = \sqrt{-\det{(V)}} \exp{\left(-i \Sigma \right)}
+\end{equation}
+Here $\Sigma = S[ \bar{q}_{a}, \bar{q}_{b} ]$ and the matrix $V$ is a $2 \times 2$ array of spacetime matrices,
+\begin{equation}
+	V = \begin{pmatrix}
+	V_{13} & V_{23} \\
+	V_{14} & V_{24}
+	\end{pmatrix}, \qquad (V_{jk})_{mn} = -i \frac{\partial^{2} \Sigma}{\partial x_{j}^{m} \partial x_{k}^{n}}
+\end{equation}
+This is the familiar JWKB approximation. As we discuss in chapter \ref{ChParticles}, the semiclassical approximation in the quantum-mechanical path integral leads to a \textit{strong-coupling expansion}, in the sense that the result at the end of the calculation does not correspond to a specific perturbative order. This is already a promising sign that we are \textit{en ruta} to study bound states.
+
+In order to find $\mathcal{V}$, we must find $\bar{q}_{a}(\tau)$ and $\bar{q}_{b}(\sigma)$ by solving the classical equations of motion obtained from the action functional $S$ that appears in $\mathcal{F}$. The classical solution is elusive for the kind of systems that we consider, so we use another approximation: we restrict the kinematical regime to \textit{small-angle scattering}. In this regime, the classical paths of the particles can be nicely approximated by the eikonal paths, $e_{a}(\tau)$ and $e_{b}(\sigma)$, which describe straight paths in spacetime. Thus,
+\begin{equation}
+	\mathcal{V}(3,4|1,2) \quad \xrightarrow[\text{scattering}]{\text{small-angle}} \quad \mathcal{E}(3,4|1,2) = \sqrt{-\det{(V_{\text{eik}})}} \exp{\left(-i \Sigma_{\text{eik}} \right)}
+\end{equation}
+where $\Sigma_{\text{eik}} = S[ e_{a}, e_{b} ]$ and $V_{\text{eik}}$ is defined in the same way as $V$, but with derivatives of $\Sigma_{\text{eik}}$ instead of $\Sigma$.
+
+To summarize, we use two approximations in order to evaluate the quantum path integral,
+\begin{equation}
+	\mathcal{F}(3,4|1,2) \quad \xrightarrow[\text{approximation}]{\text{semiclassical}} \quad \mathcal{V}(3,4|1,2) \quad \xrightarrow[\text{scattering}]{\text{small-angle}} \quad \mathcal{E}(3,4|1,2)
+\end{equation}
+%which we can write as
+%\begin{equation}
+%	\mathcal{F}(3,4|1,2) \quad \xrightarrow[\text{approximation}]{\text{eikonal JWKB}} \quad \mathcal{E}(3,4|1,2)
+%\end{equation}
+In four-dimensional Minkowski spacetime, these approximations yield a result for the scattering amplitude that contains all perturbative orders in the coupling parameter, and have an infinite number of singularities. After analytic continuation of the momenta, from the physical scattering region to the bound state region, these singularities can be identified with bound states. The form of the scattering amplitude thus obtained exhibit Regge behavior, but it should be noted that we do not need to take the high-energy limit. That is, our results arrive at Regge amplitudes \textit{without} taking the Regge limit.
+
+Every scattering event that we consider has \textit{massive} external particles. The interactions between the particles are analogous to exchanging massless or massive quanta. We consider three types of massless exchanges: scalar, vector (photons) and tensor (linearized gravitons). In $D = 4$, the result for the nonperturbative scattering amplitude with any massless exchange have the same general form:
+\begin{equation}
+	\mathcal{A}_{\text{tree}}(s, t) \exp{\left[ \alpha \Gamma(\epsilon) \rho(s) \right]} \frac{\Gamma[1 - \alpha \rho(s) ]}{\Gamma[1 + \alpha \rho(s) ]} \left( - \frac{t}{2 \mu^{2}} \right)^{\alpha \rho(s)} \quad \epsilon = \frac{D - 4}{2}
+\end{equation}
+Here $\mathcal{A}_{\text{tree}}$ is the tree level amplitude, due to the exchange of a single massless quantum; $\alpha$ is a coupling parameter, and $\rho$ is a function of the center-of-mass energy $s$ that is imaginary inside the physical scattering region. The particular form of $\rho$ depends on the nature of the massless exchange quanta. We also consider the exchange of a massive scalar. The results with the massive scalar do not exhibit bound states in $D = 4$, but in $D = 3$ the result contains an Euler Gamma function whose singularities correspond to the multi-particle branch points in the $t$-channel.
+
+The use of the quantum-mechanical semiclassical approximation to obtain nonperturbative scattering amplitudes is not new. In its most recent application, it can be found in the program started by Alday \& Maldacena \cite{Alday:2007hr} who computed a four-point amplitude of gluons in $\mathcal{N} = 4$ super Yang-Mills theory at strong-coupling by considering semiclassical strings in five-dimensional anti de-Sitter spacetime. This is another example of using semiclassical \textit{mechanical} objects (the strings) to obtain a nonperturbative amplitude. It is somewhat comforting to find that Nature has allowed classical methods to still play a useful role in the description of its deepest quantum secrets.

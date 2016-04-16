@@ -1,0 +1,114 @@
+\contentsline {chapter}{\numberline {}{List of Figures}}{ix}{section*.2}
+\contentsline {chapter}{\numberline {}{Acknowledgements}}{x}{section*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Dissertation Outline}{5}{chapter.2}
+\contentsline {chapter}{\numberline {3}Historical Overview}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Regge Scattering}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Perturbative First-Quantization}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Alday-Maldacena Theory}{12}{section.3.3}
+\contentsline {chapter}{\numberline {4}Nonrelativistic Path Integrals}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Quantum Kernels}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}S-Matrix}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Semiclassical Kernels}{18}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Semiclassical S-Matrix}{24}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Semiclassical Eikonal Kernels}{24}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Semiclassical Eikonal S-Matrix}{26}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Many-body Systems}{26}{section.4.5}
+\contentsline {chapter}{\numberline {5}Eikonal Coulomb Scattering}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Eikonal Kernel}{30}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Eikonal Van Vleck Function}{31}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Eikonal Van Vleck Matrix}{33}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Semiclassical Eikonal S-Matrix}{34}{section.5.2}
+\contentsline {chapter}{\numberline {6}Classical Relativistic Particles}{40}{chapter.6}
+\contentsline {section}{\numberline {6.1}Free System}{40}{section.6.1}
+\contentsline {section}{\numberline {6.2}Coupling to External Fields}{42}{section.6.2}
+\contentsline {subsubsection}{Scalar Field}{42}{section*.6}
+\contentsline {subsubsection}{Vector Field}{42}{section*.7}
+\contentsline {subsubsection}{Symmetric Tensor Field}{43}{section*.8}
+\contentsline {subsubsection}{Higher-Spin Fields}{43}{section*.9}
+\contentsline {section}{\numberline {6.3}Semiclassical Dimensional Analysis}{43}{section.6.3}
+\contentsline {chapter}{\numberline {7}Relativistic Path Integrals}{49}{chapter.7}
+\contentsline {subsubsection}{Note}{49}{section*.10}
+\contentsline {section}{\numberline {7.1}Quantum Kernels}{49}{section.7.1}
+\contentsline {section}{\numberline {7.2}S-Matrix}{51}{section.7.2}
+\contentsline {section}{\numberline {7.3}Semiclassical Kernels}{51}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Semiclassical S-Matrix}{52}{subsection.7.3.1}
+\contentsline {section}{\numberline {7.4}Semiclassical Eikonal Kernels}{53}{section.7.4}
+\contentsline {section}{\numberline {7.5}Many-body Systems}{53}{section.7.5}
+\contentsline {chapter}{\numberline {8}Four-Point Scattering of Scalars}{54}{chapter.8}
+\contentsline {section}{\numberline {8.1}Massless Scalar Exchange}{55}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Eikonal Van Vleck Function}{59}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Eikonal Van Vleck Matrix}{61}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Eikonal S-Matrix}{62}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Perturbative Amplitudes}{70}{subsection.8.1.4}
+\contentsline {subsubsection}{Three Dimensions}{71}{section*.11}
+\contentsline {subsubsection}{Four Dimensions}{72}{section*.12}
+\contentsline {subsection}{\numberline {8.1.5}Bound States in Four Dimensions}{74}{subsection.8.1.5}
+\contentsline {subsubsection}{Perturbative Comparison}{76}{section*.13}
+\contentsline {subsubsection}{Bound State Spectrum}{77}{section*.14}
+\contentsline {subsubsection}{Regge Behavior}{79}{section*.15}
+\contentsline {subsubsection}{Crossing}{81}{section*.16}
+\contentsline {section}{\numberline {8.2}Massless Vector Exchange}{82}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Eikonal Van Vleck Function}{84}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Eikonal S-Matrix}{84}{subsection.8.2.2}
+\contentsline {subsubsection}{Three Dimensions}{86}{section*.17}
+\contentsline {subsection}{\numberline {8.2.3}Bound States in Four Dimensions}{88}{subsection.8.2.3}
+\contentsline {subsubsection}{Bound State Spectrum}{88}{section*.18}
+\contentsline {subsubsection}{Regge Behavior}{90}{section*.19}
+\contentsline {section}{\numberline {8.3}Massless Symmetric Tensor Exchange}{90}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Eikonal Van Vleck Function}{93}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Eikonal S-Matrix}{94}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3}Bound States in Four Dimensions}{95}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}Massive Scalar Exchange}{97}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Eikonal Van Vleck Function}{98}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Eikonal S-Matrix}{99}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Perturbative Amplitudes}{101}{subsection.8.4.3}
+\contentsline {subsubsection}{Three Dimensions}{101}{section*.20}
+\contentsline {subsubsection}{Four Dimensions}{103}{section*.21}
+\contentsline {chapter}{\numberline {9}Discussion and Outlook}{105}{chapter.9}
+\contentsline {section}{\numberline {9.1}Discussion}{105}{section.9.1}
+\contentsline {subsubsection}{Regge Ladders}{105}{section*.22}
+\contentsline {subsubsection}{Eikonal Ladders}{109}{section*.23}
+\contentsline {subsubsection}{Nonrelativistic Coulomb Spectrum}{112}{section*.24}
+\contentsline {subsubsection}{Relativistic Coulomb Spectrum}{112}{section*.25}
+\contentsline {subsubsection}{Eikonal Gravity}{113}{section*.26}
+\contentsline {section}{\numberline {9.2}Outlook}{113}{section.9.2}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{Bibliography}}{120}{section*.38}
+\contentsline {chapter}{\numberline {A}Relativistic Free Scalar Matter}{126}{appendix.A}
+\contentsline {section}{\numberline {A.1}Massive Scalar Particle}{126}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Semiclassical Kernel}{127}{subsection.A.1.1}
+\contentsline {subsubsection}{Fourier Transform}{130}{section*.40}
+\contentsline {subsubsection}{One-Dimensional Kernel}{132}{section*.41}
+\contentsline {subsubsection}{Three-Dimensional Kernel}{133}{section*.42}
+\contentsline {subsubsection}{Four-Dimensional Kernel}{134}{section*.43}
+\contentsline {subsection}{\numberline {A.1.2}Quantum Kernel}{136}{subsection.A.1.2}
+\contentsline {subsubsection}{Fourier Transform}{136}{section*.44}
+\contentsline {subsubsection}{One-Dimensional Kernel}{137}{section*.45}
+\contentsline {subsubsection}{Three-Dimensional Kernel}{137}{section*.46}
+\contentsline {subsubsection}{Four-Dimensional Kernel}{138}{section*.47}
+\contentsline {section}{\numberline {A.2}Massless Scalar Particle}{138}{section.A.2}
+\contentsline {chapter}{\numberline {B}Momentum Invariants}{139}{appendix.B}
+\contentsline {section}{\numberline {B.1}Mandelstam Invariants}{139}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Two-quanta}{139}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Three-quanta}{140}{subsection.B.1.2}
+\contentsline {section}{\numberline {B.2}Gram Invariants}{140}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Two-quanta}{141}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Three-quanta}{141}{subsection.B.2.2}
+\contentsline {chapter}{\numberline {C}Four-point Scalar Kinematics}{142}{appendix.C}
+\contentsline {section}{\numberline {C.1}Momentum Invariants}{142}{section.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Mandelstam Invariants}{142}{subsection.C.1.1}
+\contentsline {subsection}{\numberline {C.1.2}Gram Invariants}{143}{subsection.C.1.2}
+\contentsline {section}{\numberline {C.2}Center-of-Momentum Frame}{144}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Physical Scattering Region}{147}{subsection.C.2.1}
+\contentsline {section}{\numberline {C.3}Crossing}{147}{section.C.3}
+\contentsline {section}{\numberline {C.4}Types of Scattering Regimes}{150}{section.C.4}
+\contentsline {subsection}{\numberline {C.4.1}Forward Scattering}{150}{subsection.C.4.1}
+\contentsline {subsection}{\numberline {C.4.2}Backward Scattering}{151}{subsection.C.4.2}
+\contentsline {subsection}{\numberline {C.4.3}Fixed-angle Scattering}{151}{subsection.C.4.3}
+\contentsline {subsection}{\numberline {C.4.4}Regge Scattering}{151}{subsection.C.4.4}
+\contentsline {chapter}{\numberline {D}Gamma, Beta, Zeta, Etcetera}{152}{appendix.D}
+\contentsline {section}{\numberline {D.1}Riemann zeta}{152}{section.D.1}
+\contentsline {section}{\numberline {D.2}Euler Gamma}{153}{section.D.2}
+\contentsline {section}{\numberline {D.3}Euler Beta}{156}{section.D.3}
+\contentsline {section}{\numberline {D.4}Binomial}{157}{section.D.4}
+\contentsline {chapter}{\numberline {E}Fourier Transforms}{159}{appendix.E}

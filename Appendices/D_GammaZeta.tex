@@ -1,0 +1,240 @@
+\chapter{Gamma, Beta, Zeta, Etcetera\label{AppGamma}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this appendix we list some properties of the Euler Gamma function, the Riemann zeta function and the binomial coefficient.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Riemann zeta}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Riemann zeta function $\zeta(s)$ is traditionally defined as an infinite series
+\begin{equation}
+	\zeta(s) \equiv \sum_{n = 1}^{\infty} \frac{1}{n^{s}}
+\end{equation}
+This function also appears for special values of the polylogarithm $\operatorname{Li}_{n}{(z)}$
+\begin{equation}
+	\operatorname{Li}_{k}{(z)} \equiv \sum_{n = 1}^{\infty} \frac{z^{n}}{n^{k}}
+\end{equation}
+That is,
+\begin{equation}
+	\zeta(s) = \operatorname{Li}_{s}{(1)}
+\end{equation}
+Some special values are
+\begin{equation}
+	\zeta(0) = - \frac{1}{2} \qquad \zeta(2) = \frac{\pi^{2}}{6} \qquad \zeta(4) = \frac{\pi^{4}}{90} \qquad \zeta(6) = \frac{\pi^{6}}{945}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Euler Gamma}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Euler Gamma function $\Gamma(z)$ can be defined as an integral
+\begin{equation}
+	\Gamma(z) \equiv \int\limits_{0}^{\infty} \mathrm{d}\omega \left( \frac{1}{\omega} \right)^{1-z} \exp{(- \omega)}
+\end{equation}
+This function has singularities for $z = 0$ and $z = -n$ with $n$ a positive integer. As a sum of simple poles:
+\begin{equation}
+	\Gamma(z) = \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(n + 1)(n + z)} + \int\limits_{1}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{1 - z} \exp{\left( - T \right)}
+\end{equation}
+One can write $\Gamma(z)$ as an infinite product
+\begin{equation}
+	\Gamma(z) = \frac{1}{z} \prod_{n = 1}^{\infty}\left( 1 + \frac{1}{n} \right)^{z} \left( 1 + \frac{z}{n} \right)^{-1}
+\end{equation}
+or equivalently
+\begin{equation}
+	\Gamma(z) = \frac{1}{z} \exp{\left[ z \sum_{n = 1}^{\infty} \log{\left( 1 + \frac{1}{n} \right)} - \sum_{k = 1}^{\infty} \log{\left( 1 + \frac{z}{k} \right)} \right]}
+\end{equation}
+So then, the reciprocal of $\Gamma(z)$ gives
+\begin{equation}
+	\frac{1}{\Gamma(z)} = z \exp{\left[ -z \sum_{n = 1}^{\infty} \log{\left( 1 + \frac{1}{n} \right)} + \sum_{k = 1}^{\infty} \log{\left( 1 + \frac{z}{k} \right)} \right]}
+\end{equation}
+Thus
+\begin{equation}
+\begin{split}
+	\frac{\Gamma(z)}{\Gamma(w)} &= \frac{w}{z} \exp{\left[ (z - w) \sum_{n = 1}^{\infty} \log{\left( 1 + \frac{1}{n} \right)} - \sum_{k = 1}^{\infty} \log{\left( \frac{k + z}{k + w} \right)} \right]} \\
+	&= \exp{\left[ (z - w) \sum_{n = 1}^{\infty} \log{\left( 1 + \frac{1}{n} \right)} - \sum_{k = 0}^{\infty} \log{\left( \frac{k + z}{k + w} \right)} \right]}
+\end{split}
+\end{equation}
+In particular,
+\begin{equation}
+	\frac{\Gamma(1 - z)}{\Gamma(1 + z)} = \exp{\left[ - 2 z \sum_{n = 1}^{\infty} \log{\left( 1 + \frac{1}{n} \right)} - \sum_{k = 0}^{\infty} \log{\left( \frac{k + 1 - z}{k + 1 + z} \right)} \right]}
+\end{equation}
+
+Other identities are
+\begin{equation}
+	\frac{\Gamma(z + 1)}{\Gamma(z - 1)} = z (z - 1) \qquad \frac{\Gamma(- z  +1)}{\Gamma(- z - 1)} = z (z + 1)
+\end{equation}
+and
+\begin{equation}
+	\Gamma\left(z + \frac{1}{2} \right)  = \left(z - \frac{1}{2} \right) \Gamma\left(z - \frac{1}{2} \right) 
+\end{equation}
+More general identities are
+\begin{equation}
+\begin{split}
+	\frac{\Gamma(z)}{\Gamma(z - n)} &= \prod_{k = 1}^{n} (z - k), \qquad n = 1, 2, 3, \ldots \\
+	\frac{\Gamma(z + n)}{\Gamma(z)} &= \prod_{k = 1}^{n} (z + k - 1), \qquad n = 1, 2, 3, \ldots \\
+	\frac{\Gamma(z + n)}{\Gamma(z - n)} &= \prod_{k = 1}^{n} (z + k - 1)(z - k), \qquad n = 1, 2, 3, \ldots
+\end{split}
+\end{equation}
+and thus
+\begin{equation}
+\begin{split}
+	\frac{\Gamma(-z)}{\Gamma(-z - n)} &= (-1)^{n} \prod_{k = 1}^{n} (z + k), \qquad n = 1, 2, 3, \ldots \\
+	\frac{\Gamma(-z + n)}{\Gamma(-z)} &= (-1)^{n} \prod_{k = 1}^{n} (z - k + 1), \qquad n = 1, 2, 3, \ldots \\
+	\frac{\Gamma(-z + n)}{\Gamma(-z - n)} &= \prod_{k = 1}^{n} (z - k + 1)(z + k), \qquad n = 1, 2, 3, \ldots
+\end{split}
+\end{equation}
+Hence
+\begin{equation}
+	\frac{\Gamma(z)}{\Gamma(z - n)} = (-1)^{n} \frac{\Gamma(1 - z + n)}{\Gamma(1 - z)}, \qquad n = 0, 1, 2, \ldots
+\end{equation}
+or equivalently,
+\begin{equation}
+	\frac{\Gamma(z + 1)}{\Gamma(z + 1 - n)} = (-1)^{n} \frac{\Gamma(n - z)}{\Gamma(-z)}, \qquad n = 0, 1, 2, \ldots
+\end{equation}
+
+The Euler-Mascheroni constant $\gamma$ can be written as the difference of two divergent series
+\begin{equation}
+	\gamma = \sum_{k = 1}^{\infty} \left[ \frac{1}{k} - \log{\left( 1 + \frac{1}{k} \right)} \right]
+\end{equation}
+One also has another expression for $\gamma$ involving $\zeta(s)$
+\begin{equation}
+	\gamma = \sum_{k = 2}^{\infty} \frac{(-1)^{k} \zeta(k)}{k}
+\end{equation}
+which is a special case of
+\begin{equation}
+	\log{\left[ \Gamma(z + 1) \right]} + \gamma z = \sum_{k = 2}^{\infty} \frac{(-z)^{k} \zeta(k)}{k}
+\end{equation}
+and thus
+\begin{equation}
+	\frac{1}{\Gamma(z)} = z \exp{\left[ \gamma z - \sum_{k = 2}^{\infty} \frac{(-z)^{k} \zeta(k)}{k} \right]}
+\end{equation}
+The Euler reflection formula,
+\begin{equation}
+	\Gamma(z) \Gamma(1 - z) = \frac{\pi}{\sin{(\pi z)}}
+\end{equation}
+and Euler's product for sine,
+\begin{equation}
+	\frac{\sin{(\pi z)}}{\pi z} = \prod_{n = 1}^{\infty} \left(1 - \frac{z^{2}}{n^{2}} \right)
+\end{equation}
+lead to
+\begin{equation}
+	\frac{1}{\Gamma(1 + z) \Gamma(1 - z)} =\prod_{n = 1}^{\infty} \left(1 - \frac{z^{2}}{n^{2}} \right)
+\end{equation}
+A result from Gauss is
+\begin{equation}
+	\Gamma(n z) = \sqrt{\frac{2 \pi}{n}} \left( \frac{n^{z}}{\sqrt{2 \pi}} \right)^{n} \prod_{k = 1}^{n} \Gamma\left(z + \frac{n - k}{n} \right), \qquad n = 1, 2, 3, \ldots
+\end{equation}
+which leads to
+\begin{equation}
+	\Gamma(1 + n z) = z\sqrt{2 \pi n} \left( \frac{n^{z}}{\sqrt{2 \pi}} \right)^{n} \prod_{k = 1}^{n} \Gamma\left(z + \frac{n - k}{n} \right), \qquad n = 1, 2, 3, \ldots
+\end{equation}
+
+We can use the Euler Gamma to write the Riemann zeta as an integral. Using
+\begin{equation}
+	\left( \frac{1}{\kappa} \right)^{z} = \frac{1}{\Gamma(z)} \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{(1-z)} \exp{(- \kappa T)}
+\end{equation}
+we find
+\begin{equation}
+\begin{split}
+	\zeta(s) &= \frac{1}{\Gamma(s)} \sum_{n = 1}^{\infty} \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{(1-s)} \exp{(- n T)} \\
+	&= \frac{1}{\Gamma(s)} \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{(1-s)} \frac{\exp{(-T)}}{1 - \exp{(-T)}}
+\end{split}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Euler Beta}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Euler Beta function $B(x, y)$ can be written in terms of the Euler Gamma function:
+\begin{equation}
+	B(x, y) = \frac{\Gamma(x) \Gamma(y)}{\Gamma(x + y)}
+\end{equation}
+This form makes it manifest that $B(x, y) = B(y, x)$. There are two useful integral representations. The first is
+\begin{equation}
+	B(x, y) = \int\limits_{0}^{1} \mathrm{d}u \left( \frac{1}{u} \right)^{1-x} \left( \frac{1}{1 - u} \right)^{1 - y}
+\end{equation}
+and the second is
+\begin{equation}
+	B(x, y) = \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{1-x} \left( \frac{1}{1 + T} \right)^{x + y}
+\end{equation}
+
+We can use the Euler Beta to write
+\begin{equation}
+	\Gamma(x + y) = \frac{\Gamma(x) \Gamma(y)}{B(x, y)} \label{GammaPlus}
+\end{equation}
+Taking the limit $y \rightarrow x$ yields
+\begin{equation}
+	\Gamma(2x) = \frac{\Gamma^{2}(x)}{B(x, x)}
+\end{equation}
+This identity relates $\Gamma(2x)$ to $\Gamma^{2}(x)$. We can use this to write
+\begin{equation}
+	\Gamma(3x) = \frac{\Gamma(x) \Gamma(2x)}{B(x, 2x)} = \frac{\Gamma^{3}(x)}{B(x, x) B(x, 2x)}
+\end{equation}
+For any integer $n > 1$ we have
+\begin{equation}
+	\Gamma(n x) = \Gamma^{n}(x) \prod_{k = 1}^{n - 1} \frac{1}{B(x, k x)}
+\end{equation}
+This identity allows us to write the ratio of $\Gamma^{n}(x)$ and $\Gamma(n x)$ in terms of Euler Beta functions:
+\begin{equation}
+	\frac{\Gamma^{n}(x)}{\Gamma(n x)} = \prod_{k = 1}^{n - 1} B(x, k x)
+\end{equation}
+
+Using $x = x_{1}$ and $y = x_{2} + x_{3}$ in (\ref{GammaPlus}) gives
+\begin{equation}
+	\Gamma(x_{1} + x_{2} + x_{3}) = \frac{\Gamma(x_{1}) \Gamma(x_{2} + x_{3})}{B(x_{1}, x_{2} + x_{3})} = \frac{\Gamma(x_{1}) \Gamma(x_{2}) \Gamma(x_{3})}{B(x_{1}, x_{2} + x_{3}) B(x_{2}, x_{3})}
+\end{equation}
+Equivalently, we could have used $x = x_{2}$ and $y = x_{1} + x_{3}$ to get
+\begin{equation}
+	\Gamma(x_{1} + x_{2} + x_{3}) = \frac{\Gamma(x_{2}) \Gamma(x_{1} + x_{3})}{B(x_{2}, x_{1} + x_{3})} = \frac{\Gamma(x_{1}) \Gamma(x_{2}) \Gamma(x_{3})}{B(x_{2}, x_{1} + x_{3}) B(x_{1}, x_{3})}
+\end{equation}
+There is still a third possibility: use $x = x_{3}$ and $y = x_{1} + x_{2}$ to get
+\begin{equation}
+	\Gamma(x_{1} + x_{2} + x_{3}) = \frac{\Gamma(x_{3}) \Gamma(x_{1} + x_{2})}{B(x_{3}, x_{1} + x_{2})} = \frac{\Gamma(x_{1}) \Gamma(x_{2}) \Gamma(x_{3})}{B(x_{3}, x_{1} + x_{2}) B(x_{1}, x_{2})}
+\end{equation}
+Thus, we find the relation
+\begin{equation}
+\begin{split}
+	B(x_{1}, x_{2} + x_{3}) B(x_{2}, x_{3}) &= B(x_{2}, x_{1} + x_{3}) B(x_{1}, x_{3}) \\
+	&= B(x_{3}, x_{1} + x_{2}) B(x_{1}, x_{2})
+\end{split}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Binomial}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Recall the binomial theorem,
+\begin{equation}
+	(1 + x)^{n} = \sum_{k = 0}^{n} \frac{1}{\Gamma(k+1)} \frac{\Gamma(n + 1)}{\Gamma(n - k + 1)} x^{k}
+\end{equation}
+This generalizes to any value $z$
+\begin{equation}
+	(1 + x)^{z} = \sum_{k = 0}^{\infty} \frac{1}{\Gamma(k+1)} \frac{\Gamma(z + 1)}{\Gamma(z - k + 1)} x^{k}
+\end{equation}
+Using the identity
+\begin{equation}
+	\frac{\Gamma(z + 1)}{\Gamma(z - k + 1)} = (-1)^{k} \frac{\Gamma(k - z)}{\Gamma(-z)}
+\end{equation}
+allows us to write
+\begin{equation}
+	\left( \frac{1}{1 - x} \right)^{z} = \sum_{k = 0}^{\infty} \frac{1}{\Gamma(k + 1)} \frac{\Gamma(z + k)}{\Gamma(z)} x^{k}
+\end{equation}
+
+In general, we have
+\begin{equation}
+	(a + b)^{n} = \sum_{k = 0}^{n} \frac{1}{\Gamma(k + 1)} \frac{\Gamma(n + 1)}{\Gamma(n - k + 1)} a^{k} b^{n - k}
+\end{equation}
+Then it follows that
+\begin{align}
+	(a + b)^{n} - a^{n} &= \sum_{k = 0}^{n - 1} \frac{1}{\Gamma(k + 1)} \frac{\Gamma(n + 1)}{\Gamma(n - k + 1)} a^{k} b^{n - k} \\
+	(a + b)^{n} - b^{n} &= \sum_{k = 1}^{n} \frac{1}{\Gamma(k + 1)} \frac{\Gamma(n + 1)}{\Gamma(n - k + 1)} a^{k} b^{n - k} \\
+	(a + b)^{n} - a^{n} - b^{n} &= \sum_{k = 1}^{n - 1} \frac{1}{\Gamma(k + 1)} \frac{\Gamma(n + 1)}{\Gamma(n - k + 1)} a^{k} b^{n - k}
+\end{align}
+We can use the binomial expansion recursively:
+\begin{align}
+	(a + b + c)^{n} &= \sum_{k_{1} = 0}^{n} \frac{1}{\Gamma(k_{1} + 1)} \frac{\Gamma(n + 1)}{\Gamma(n - k_{1} + 1)} a^{k_{1}} (b + c)^{n - k_{1}} \nonumber \\
+	&= \sum_{k_{1} = 0}^{n} \sum_{k_{2} = 0}^{n - k_{1}} \frac{\Gamma(n + 1)}{\Gamma(k_{1} + 1) \Gamma(k_{2} + 1)} \frac{a^{k_{1}} b^{k_{2}} c^{n - k_{1} - k_{2}}}{\Gamma(n - k_{1} - k_{2} + 1)}
+\end{align}
+Then it follows that
+\begin{equation}
+	(a + b + c)^{n} - a^{n} - b^{n} - c^{n}
+\end{equation}
+can be written as
+\begin{equation}
+\begin{split}
+	{}& \sum_{k_{1} = 1}^{n - 1} \sum_{k_{2} = 0}^{n - k_{1}} \frac{\Gamma(n + 1)}{\Gamma(k_{1} + 1) \Gamma(k_{2} + 1)} \frac{a^{k_{1}} b^{k_{2}} c^{n - k_{1} - k_{2}}}{\Gamma(n - k_{1} - k_{2} + 1)} \\
+	&+ \sum_{k_{3} = 1}^{n - 1} \frac{1}{\Gamma(k_{3} + 1)} \frac{\Gamma(n + 1)}{\Gamma(n - k_{3} + 1)} b^{k_{3}} c^{n - k_{3}}
+\end{split}
+\end{equation}

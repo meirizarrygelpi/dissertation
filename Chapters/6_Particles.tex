@@ -1,0 +1,253 @@
+\chapter{Classical Relativistic Particles\label{ChParticles}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We begin our approach towards the relativistic theory with the classical description of relativistic particles. Scalar particles do not have any intrinsic spin degrees of freedom. We will only consider massive scalar particles.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Free System}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The simplest case is the free system. In order to describe a relativistic particle in a Lorentz-covariant way, we must treat the time parameter $t$ in the same way that we treat the $d$ spatial coordinates $\mathbf{x}$. This is best accomplished by working in $D$-dimensional spacetime, with $D = d + 1$. The $D$-position vector $q$ has components
+\begin{equation}
+	q = (t, \mathbf{x})
+\end{equation}
+Of course, we will use the ``mostly plus'' signature.
+
+The relativistic dynamics of a scalar particle can be described by a path $q(\tau)$ in spacetime (the worldline). In order to respect Lorentz covariance, we parametrize both the spatial coordinates \textit{and} the time parameter with the same parameter $\tau$. This parameter should not have a particular meaning, so the formalism must be valid for any choice of parametrization of the path. In the end, we always resort to describing the evolution of the spatial coordinates along time, so we expect the spacetime description to have some redundancy.
+
+In Hamiltonian form, the action functional for a relativistic \textbf{free massive particle} is
+\begin{equation}
+	S_{0}[q, p, v] = \int \mathrm{d}\tau \left[- \dot{q} \cdot p + v \left( \frac{p^{2} + m^{2}}{2} \right) \right] \label{S0FreeMassivePQ}
+\end{equation}
+where $q(\tau)$ is the $D$-position, $p(\tau)$ is the classical conjugate $D$-momentum and $v(\tau)$ acts as the worldline metric. This action functional is similar to the nonrelativistic one, with the main difference that the mass $m$ only appears once.
+
+Let us first consider the equation of motion for $v(\tau)$:
+\begin{equation}
+	p^{2} + m^{2} = 0
+\end{equation}
+This is a constraint that relates the components of the $D$-momentum. Since this constraint follows from an equation of motion, it must be satisfied by classical particles. We will leave $p$ unconstrained for the moment.
+
+The equation of motion for $p(\tau)$ gives
+\begin{equation}
+	{- \dot{q} } + v p = 0 \Longrightarrow p(\tau) = \frac{1}{v(\tau)} \dot{q}
+\end{equation}
+Using this solution for $p$ in the action functional yields
+\begin{equation}
+	S_{0}[q, v] = \int \mathrm{d}\tau \left[ - \frac{1}{2v} \dot{q}^{2} + \frac{v}{2} m^{2} \right] \label{S0qv}
+\end{equation}
+This is the Lagrangian form of the action functional. We can eliminate $v$ by solving its equation of motion. This leads to an action that depends only on the $D$-position $q$. However, the resulting functional is not very practical.
+
+The action (\ref{S0qv}) is invariant under reparametrizations of $\tau$. This is a gauge symmetry. If we want to work with (\ref{S0qv}) we need to perform a gauge-fixing procedure. The particular details of this are not relevant for what follows and can be found in many references (see section III.B.1 of \cite{Fields}). After gauge-fixing we find
+\begin{equation}
+	S_{0}[q, T] = \int \mathrm{d}\tau \left[ - \frac{1}{2} \dot{q}^{2} + \frac{1}{2}m^{2} \right], \qquad 0 < \tau < T, \qquad T > 0 \label{GaugeFixedParticle}
+\end{equation}
+This choice of gauge-fixing effectively amounts to setting $v = 1$. The constant parameter $T$ is a leftover from the gauge invariance. We will refer to $T$ as the \textbf{worldline modulus}.
+
+In the relativistic theory we can set $c = 1$. This means that time intervals and spatial distances have the same units, and similarly for momentum, energy and mass. Action functionals have units of $\hbar$, which effectively correspond to units of mass multiplied by length. The spacetime $D$-position has units of length. Thus, the worldline parameter $\tau$ and the modulus $T$ have units
+\begin{equation}
+	[\tau] = [T] = [\hbar] - 2 [\text{mass}]
+\end{equation}
+
+In the next section we discuss different terms that can be added to the free gauge-fixed action (\ref{GaugeFixedParticle}) in order to incorporate interactions. The gauge-fixing procedure has already been dealt with for each one of these terms (otherwise, there would be some dependence on $v$).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coupling to External Fields}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In nonrelativistic classical mechanics one can study many-body systems where the constituents interact via arbitrary interaction potentials (although solvability is another issue). The relativistic theory requires us to only consider local interactions. The safest way to guarantee locality is to introduce an external mediating agent that couples to each body separately. One adds a term in the action $S_{\text{int}}[q, F]$ that accounts for the coupling of the particle described by $q$ to a \textit{fixed} external mediating agent $F$. The mediating agent $F$ is made dynamical after including an appropriate kinetic term $S_{\text{kin}}[F]$ in the action functional of the system. The result is a system of classical particles interacting via a dynamical classical field.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Scalar Field}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The coupling to a scalar field $\phi$ can be accomplish by adding a term of the form
+\begin{equation}
+	S_{\text{int}}[q, \phi] = \int \mathrm{d}\tau \, \phi[q(\tau)] \label{CouplingPhi}
+\end{equation}
+The field $\phi$ has units
+\begin{equation}
+	[\phi] = 2 [\text{mass}]
+\end{equation}
+in \textit{any} number of dimensions. This coupling term is analogous to the terms that appear in the nonrelativistic theory in (\ref{SIntU}), except that the time integral there is replaced here with the integral over the worldline parameter. We do not need to include any charges.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Vector Field}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The coupling to a vector field $A_{m}$ can be described with a term of the form
+\begin{equation}
+	S_{\text{int}}[q, A] = Z \int \mathrm{d}\tau \, \dot{q}^{m} A_{m}[q(\tau)] \label{CouplingA}
+\end{equation}
+where $Z$ is a dimensionless charge. Note that the field $A_{m}$ has units of mass in \textit{any} number of dimensions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Symmetric Tensor Field}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Finally, we can couple a massive scalar particle to a symmetric tensor field $h_{mn}$ by including a term of the form
+\begin{equation}
+	S_{\text{int}}[q, h] = \frac{1}{2} \int \mathrm{d}\tau \, \dot{q}^{m} \dot{q}^{n} h_{mn}[q(\tau)] \label{Couplingh}
+\end{equation}
+This term describes the coupling to linearized gravity. The field $h_{mn}$ is dimensionless in \textit{any} number of dimensions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Higher-Spin Fields}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+All three previous cases can be viewed as particular examples of the coupling term
+\begin{equation}
+	S_{\text{int}}[q, H] = \frac{1}{\Gamma(N + 1)} \int \mathrm{d}\tau \, \dot{q}^{m_{1}} \cdots \dot{q}^{m_{N}} H_{m_{1} \cdots m_{N}}[q(\tau)] \qquad N \geq 0 \label{HigherSpinCoupling}
+\end{equation}
+with $H$ totally symmetric in the spacetime indices. The field $H$ has units of
+\begin{equation}
+	[H] =  (2 - N) [\text{mass}]
+\end{equation}
+in \textit{any} number of dimensions.
+
+The external scalar is obtained with $N = 0$, the external vector with $N = 1$, and the external symmetric tensor with $N = 2$. The next natural step is $N = 3$:
+\begin{equation}
+	S_{\text{int}}[q, W] = \frac{1}{6} \int \mathrm{d}\tau \, \dot{q}^{m} \dot{q}^{n} \dot{q}^{l} W_{mnl}[q(\tau)]
+\end{equation}
+The nice thing about the external scalar, the external vector and the external tensor is that the coupling terms are \textit{at most quadratic} in $\dot{q}$. With $N = 3$, one finds a coupling term that is \textit{cubic} in $\dot{q}$. In any case, the physical meaning of dynamical massless fields with spin larger than 2 is notoriously obscure. We will not consider couplings to such fields.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Semiclassical Dimensional Analysis\label{SecDimAn}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We have already mentioned the units of some of the quantities that appear in the action functional for a particle. The external fields that appear have the familiar mass-dimension for a mediating field. We did not include the coupling parameter in these interaction terms. The coupling parameter will appear in the kinetic term for the mediating field, as is customary in Yang-Mills theory. Since the external mediating fields that we consider have the usual mass-dimension, we could expect (incorrectly) that the interactions mediated by a field between \textit{matter particles} are very similar to the interactions mediated by a field between \textit{matter fields}. In this section we use dimensional analysis to show that, in the semiclassical approximation, these two types of theories can behave very differently.
+
+We start with the kinetic term for a \textit{matter} field $\varphi$:
+\begin{equation}
+	S_{\text{kin}}[\varphi] = \frac{1}{2} \int \int \mathrm{d}x \mathrm{d}y \left[ \varphi(x) \cdot K_{\varphi}(x|y) \cdot \varphi(y)  \right]
+\end{equation}
+(i.e. a kinetic term with no coupling parameter). The kinetic operator $K_{\varphi}$ has units
+\begin{align}
+	[ K_{\varphi} ] &= -(D + 2) [ \text{length} ] \nonumber \\
+	&= -(D + 2) [\hbar] + (D + 2) [ \text{mass} ]
+\end{align}
+The action has units of $\hbar$, so we find that the \textit{matter} field $\varphi$ has units
+\begin{equation}
+	[\varphi] = \left( \frac{3 - D}{2} \right) [\hbar] + \left( \frac{D - 2}{2} \right) [\text{mass}] \label{aUnits}
+\end{equation}
+The mass-dimension is familiar, but the $\hbar$-dimension is seldom mentioned, since one typically sets $\hbar = 1$ (i.e. $[\hbar] = 0$). We will see that the $\hbar$-dimension allows us to understand better the dynamical consequences of the semiclassical approximation.
+
+In this dissertation we consider theories of matter quanta interacting via the exchange of mediating quanta (the force carriers). The matter quanta is described in terms of \textit{particles}. For comparison, let us briefly consider the theory of a matter field $\varphi$ interacting with a massless scalar field $\phi_{f}$ via a term of the form
+\begin{equation}
+	S_{n}[\varphi, \phi_{f}] = \int \mathrm{d}x \, \varphi_{a}^{2} (\phi_{f})^{n}
+\end{equation}
+In Feynman graphs, this term leads to an interaction vertex of degree $n + 2$. Since $\varphi$ is a matter field, it has units given by (\ref{aUnits}). Since $S_{n}$ has units of $\hbar$, with the units $\varphi$ we can find the units of $\phi_{f}$,
+\begin{equation}
+	[\phi_{f}] = - \frac{2}{n} [\text{length}] = - \frac{2}{n} [\hbar] + \frac{2}{n} [\text{mass}]
+\end{equation}
+Finally, the kinetic term for the field $\phi_{f}$ is
+\begin{equation}
+	\frac{1}{2(f_{n})^{2/n}} \int \int \mathrm{d}x \mathrm{d}y \left[ \phi_{f}(x) K_{\phi}(x|y) \phi_{f}(y)  \right] \label{Kinphif}
+\end{equation}
+It follows that the coupling parameter $f_{n}$ has units
+\begin{equation}
+	[f_{n}] = \left( \frac{nD - 3n - 4}{2} \right) [\hbar] + \left( \frac{4 + 2 n - nD}{2} \right) [\text{mass}]
+\end{equation}
+When $n = 1$, we have
+\begin{equation}
+	[f_{1}] = \left( \frac{D - 7}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}]
+\end{equation}
+Other interesting cases are $n = 2$,
+\begin{equation}
+	[f_{2}] = \left( D - 5 \right) [\hbar] + \left( 4 - D \right) [\text{mass}]
+\end{equation}
+and $n = 4$,
+\begin{equation}
+	[f_{4}] = 2\left( D - 4 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}]
+\end{equation}
+The case $n = 1$ corresponds to a cubic interaction. The mass-dimension is familiar, but again, the $\hbar$-dimension is seldom mentioned. In practice, we expect the coupling parameter to appear in the form of a dimensionless combination $\alpha_{f}$ given by
+\begin{equation}
+	\alpha_{f} = k_{f} f_{1}^{2} \hbar^{(7 - D)} \mu^{(D - 6)}
+\end{equation}
+where $k_{f}$ is a numerical constant and $\mu$ has units of mass. Note the power of $\hbar$ in this expression. If $D < 7$ and we let $\hbar \rightarrow 0$ while keeping $f^{2}_{1}$ fixed, then $\alpha_{f} \rightarrow 0$. Thus, in $D < 7$ (which includes $D = 4$), the semiclassical approximation of the theory with $\phi_{f}$ yields a \textit{weak-coupling} expansion.
+
+The coupling term (\ref{CouplingPhi}) for a scalar particle to an external scalar field also corresponds to a cubic interaction. We will denote the field that appears there by $\phi_{p}$ since it couples to a \textit{particle}. We already found that $\phi_{p}$ has units
+\begin{equation}
+	[\phi_{p}] = 2[ \text{mass} ]
+\end{equation}
+The kinetic term for $\phi_{p}$ is similar to (\ref{Kinphif}),
+\begin{equation}
+	\frac{1}{2g^{2}_{0}} \int \int \mathrm{d}x \mathrm{d}y \left[ \phi_{p}(x) K_{\phi}(x|y) \phi_{p}(y)  \right]
+\end{equation}
+but we expect the coupling parameter $g_{0}$ to have different units. Indeed,
+\begin{equation}
+	[g_{0}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}]
+\end{equation}
+The corresponding dimensionless combination $\alpha_{p}$ is now given by
+\begin{equation}
+	\alpha_{p} = k_{p} g_{0}^{2} \hbar^{(3 - D)} \mu^{(D - 6)}
+\end{equation}
+where $k_{p}$ is a numerical constant and $\mu$ has units of mass. If $D > 3$ and we set $\hbar \rightarrow 0$ while keeping $g_{0}^{2}$ fixed, then $\alpha_{p} \rightarrow \infty$. That is, in $D > 3$ (which includes $D = 4$), the semiclassical approximation of the theory with $\phi_{p}$ yields a \textit{strong-coupling} expansion!
+
+The previous example illustrates that the interaction between fields, and the interaction between fields and particles, are different, at least in the semiclassical approximation.
+
+We can generalize the particle coupling to a scalar in (\ref{CouplingPhi}) to
+\begin{equation}
+	S_{\text{int}}[q, \phi_{p}] = \int \mathrm{d}\tau \, \phi^{n}_{p}[q(\tau)], \qquad n \geq 1
+\end{equation}
+Now the field $\phi_{p}$ has units
+\begin{equation}
+	[\phi_{p}] = \frac{2}{n} [\text{mass}]
+\end{equation}
+Hence, from the kinetic term for the field $\phi_{p}$,
+\begin{equation}
+	\frac{1}{2(g_{p})^{2/n}} \int \int \mathrm{d}x \mathrm{d}y \left[ \phi_{p}(x) K_{\phi}(x|y) \phi_{p}(y)  \right]
+\end{equation}
+we find that the coupling parameter $g_{p}$ has units
+\begin{equation}
+	[g_{p}] = \left( \frac{nD - 3n}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}]
+\end{equation}
+Thus, as long as $D > 3$, we find that the semiclassical approximation leads to a strong-coupling expansion.
+
+A similar outcome follows for the interaction mediated by a massless vector field. Consider a massless vector field $A_{f}$ coupled to matter. The interaction is introduced via the covariant derivative,
+\begin{equation}
+	\partial \longrightarrow \nabla = \partial + iA_{f}
+\end{equation}
+Thus, the field $A_{f}$ has units
+\begin{equation}
+	[A_{f}] = - [\text{length}] = - [\hbar] + [\text{mass}]
+\end{equation}
+From the kinetic term
+\begin{equation}
+	\frac{1}{g^{2}_{f}} \int \int \mathrm{d}x \mathrm{d}y \left[ \frac{1}{2} A_{f}(x) \cdot K_{A}(x|y) \cdot A_{f}(y)  \right]
+\end{equation}
+we find that the coupling parameter $g_{f}$ has units
+\begin{equation}
+	[g_{f}] = \left( \frac{D - 5}{2} \right) [\hbar] + \left( \frac{4 - D}{2} \right) [\text{mass}] \label{gfVec}
+\end{equation}
+The dimensionless combination $\alpha_{f}$ is
+\begin{equation}
+	\alpha_{f} = k_{f} g_{f}^{2} \hbar^{(5 - D)} \mu^{(D - 4)}
+\end{equation}
+Like in the theory with $\phi_{f}$, if $D < 5$ and we let $\hbar \rightarrow 0$ while keeping $g_{f}^{2}$ fixed, then $\alpha_{f} \rightarrow 0$. Thus, in $D < 5$ (which includes $D = 4$), the semiclassical approximation of the theory with $A_{f}$ yields a \textit{weak-coupling} expansion.
+
+In the particle coupling (\ref{CouplingA}), the field $A_{p}$ has units of mass. Thus, from the kinetic term
+\begin{equation}
+	\frac{1}{g^{2}_{1}} \int \int \mathrm{d}x \mathrm{d}y \left[ \frac{1}{2} A_{p}(x) \cdot K_{A}(x|y) \cdot A_{p}(y)  \right]
+\end{equation}
+we find that the coupling parameter $g_{1}$ has units
+\begin{equation}
+	[g_{1}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{4 - D}{2} \right) [\text{mass}]
+\end{equation}
+The mass-dimension agrees with the expected result, but the $\hbar$-dimension is different from (\ref{gfVec}). The dimensionless combination $\alpha_{p}$ is
+\begin{equation}
+	\alpha_{p} = k_{p} g_{1}^{2} \hbar^{(3 - D)} \mu^{(D - 4)}
+\end{equation}
+Just like in the theory with $\phi_{p}$, if $D > 3$ and we set $\hbar \rightarrow 0$ while keeping $g_{1}^{2}$ fixed, then $\alpha_{p} \rightarrow \infty$. So again, we find that in $D > 3$ (which includes $D = 4$), the semiclassical approximation of the theory with $A_{p}$ yields a \textit{strong-coupling} expansion.
+
+The last example is the gravitational interaction, where the field $h_{f}$ is a massless symmetric tensor. Since the field corresponds to the linearized metric tensor, it is dimensionless:
+\begin{equation}
+	[h_{f}] = 0
+\end{equation}
+From the kinetic term, we find that the coupling $g_{f}$ has units
+\begin{equation}
+	[g_{f}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}]
+\end{equation}
+The dimensionless combination $\alpha_{f}$ is
+\begin{equation}
+	\alpha_{f} = k_{f} g^{2}_{f} \hbar^{(3 - D)} \mu^{(D - 2)}
+\end{equation}
+The semiclassical approximation yields a weak-coupling expansion when $D < 3$ and a strong-coupling expansion when $D > 3$ (which includes $D = 4$). In the particle coupling (\ref{Couplingh}), the field $h_{p}$ is also dimensionless, and thus we find the same feature.
+
+Indeed, if we consider the particle coupling to a spin $N$ field as in (\ref{HigherSpinCoupling}), we would find that the coupling parameter has units
+\begin{equation}
+	[g_{N}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}]
+\end{equation}
+which can be compared to the coupling parameter for the interaction between fields,
+\begin{equation}
+	[f_{N}] = \left( \frac{D + 2N - 7}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}]
+\end{equation}
+We see that, in the semiclassical approximation, the particle coupling parameter $g_{N}$ becomes very large for any value of $N$ when $D > 3$.
+
+The moral of this discussion is that there are different semiclassical approximations: the semiclassical approximation for fields mediating the interactions between matter \textit{particles}, and the semiclassical approximation for fields mediating the interaction between matter \textit{fields}. More details about the relation between the semiclassical approximation in field theory and particle theory can be found in \cite{HalpernSiegel}.
+
+We have found that the semiclassical approximation has dynamical consequences. In theories with particle couplings, it leads to a strong-coupling expansion in $D = 4$, and in theories with field couplings, it sometimes leads to a weak-coupling expansion in $D = 4$. Since we are going to work with particles in $D = 4$, we expect the semiclassical approximation to yield nonperturbative results. As we will see, the results will be nonperturbative in the sense that they correspond to all orders in perturbation theory. It is due to this nonperturbative nature that we will be able to find bound states.
